@@ -1,0 +1,114 @@
+.course-slider,
+.courses-home-list
+    width: 100%
+    padding: get-vw(50px) 0
+
+.course-slide-item
+    position: relative
+    height: get-vw(335px)
+    overflow: hidden
+    +mediaSize(1024)
+        height: 25vw
+
+.course-slide-item .main-btn
+    position: absolute
+    z-index: 15
+    left: 50%
+    transform: translate(-50%, 0)
+    top: 100%
+    transition: 0.7s ease
+
+.default .course-slide-item .main-btn
+    font-size: get-vw(16px)
+
+.course-slide-item:hover .main-btn
+    transform: translate(-50%, -260%)
+
+.default .course-slide-item:hover .main-btn
+    transform: translate(-50%, -140%)
+
+.course-slide-item:hover .course-slide-content p
+    transform: translate(0, -70%)
+
+.course-slide-item:hover .course-slide-content p
+    transform: translate(0, -100%)
+
+.course-slide-item:hover .course-slide-content
+    background: $blue55
+
+.course-slide-item img
+    width: 100%
+    object-fit: cover
+    height: 100%
+
+.course-slide-content
+    position: absolute
+    transition: background-color 0.4s ease
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background: $blue40
+    display: flex
+    align-items: center
+    justify-content: center
+
+.default.course-slider .course-slide-content
+    align-items: flex-end
+
+.default.course-slider .course-slide-content p
+    font-size: get-vw(16px)
+    width: 75%
+
+
+.course-slide-content p
+    +letterSpace(150)
+    text-transform: uppercase
+    font-size: get-vw(18px)
+    text-align: center
+    line-height: 1.5
+    color: #fff
+    padding:  get-vw(15px)
+    display: flex
+    font-weight: 500
+    width: 53%
+    margin-left: auto
+    margin-right: auto
+    transition: 0.4s ease
+    justify-content: center
+    +mediaSize(1024)
+        font-size: 10px
+        width: 85%
+
+
+.inner-slider  .slick-slide
+    margin: 0 get-vw(25px)
+
+.default.inner-slider  .slick-slide
+    margin: 0 get-vw(10px)
+
+.inner-slider  .slick-list
+    margin: 0 get-vw(-25px)
+    width: get-calc-vw(100%, '+', 50px)
+
+.default.inner-slider  .slick-list
+    margin: 0 get-vw(-10px)
+    width: get-calc-vw(100%, '+', 20px)
+
+.course-slider-wrap,
+.courses-home
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.courses-home > a.main-btn
+    +mediaSize(1024)
+        margin-top: 20px
+
+
+
+
+
+
+

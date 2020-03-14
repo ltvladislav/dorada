@@ -1,0 +1,103 @@
+.main-slider
+    width: 93%
+    margin-left: auto
+    opacity: 0
+
+
+.slide-item
+    width: 100%
+    position: relative
+    display: flex
+    height: 100%
+
+.slide-image
+    width: 65%
+    margin-left: auto
+    height: 100%
+    position: relative
+    overflow: hidden
+
+
+.slide-image:before
+    content: ''
+    display: block
+    width: 100%
+    top: 0
+    bottom: 0
+    right: 0
+    left: -15%
+    position: absolute
+    background: linear-gradient(90deg, #fff 0, rgba(255,255,255,0) 40%)
+    +mediaSize(1024)
+        left: -5%
+        background: linear-gradient(90deg, #fff 0, rgba(255,255,255,0) 55%)
+
+
+.slide-image img
+    width: 100%
+    object-fit: cover
+    height: 100%
+
+.slide-content
+    width: 48%
+    position: absolute
+    z-index: 5
+    left: 0
+    top: 0
+    bottom: 0
+    display: flex
+    justify-content: center
+    align-items: flex-start
+    flex-direction: column
+    +mediaSize(1024)
+        width: 65%
+
+.slide-heading
+    font-family: $playfair
+    font-weight: 700
+    color: $mainText
+    +letterSpace(50)
+    width: 100%
+    padding-bottom: get-vw(55px)
+    font-size: get-vw(70px)
+    opacity: 0
+    +mediaSize(1024)
+        font-size: 38px
+        padding-bottom: 35px
+
+.slide-text
+    width: 67%
+    display: flex
+    line-height: 1.2
+    font-size: get-vw(20px)
+    +letterSpace(50)
+    opacity: 0
+    +mediaSize(1024)
+        font-size: 15px
+        line-height: 1.25
+
+.slide-content .main-btn
+    margin-top: get-vw(60px)
+    opacity: 0
+    +mediaSize(1024)
+        margin-top: 35px
+
+.main-btn
+    display: flex
+    align-items: center
+    justify-content: center
+    background: $lightBlue
+    transition: 0.4s ease
+    color: #fff
+    font-size: get-vw(18px)
+    padding: get-vw(20px) get-vw(25px)
+    font-weight: 500
+    +letterSpace(100)
+    +mediaSize(1024)
+        font-size: 13px
+        padding: 12px 20px
+    +mediaSize(750)
+        font-size: 11px
+
+.main-btn:hover
+    background: $lightBlue70
