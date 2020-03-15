@@ -95,6 +95,7 @@ if (mix.inProduction()) {
     // convert single file into a backwards compatible
     // version of JavaScript in current and older browsers.
     mix.babel(["public/js/vanilla.js"], "public/js/app.js");
+    mix.copyDirectory("resources/image", "public/image");
 
 
 } else {
@@ -102,6 +103,7 @@ if (mix.inProduction()) {
     mix.js(["resources/js/app.js"], "public/js/app.js");
     // mix.js(["resources/js/ajax-module.js"], "public/js/ajax-module.js");
     // mix.js(["resources/js/Helper.js"], "public/js/Helper.js");
+    mix.copyDirectory("resources/image", "public/image");
 }
 
 // fonts, images, temporary diresctories
@@ -112,6 +114,7 @@ mix.copyDirectory("resources/image", "public/image");
 // mix.copy("resources/index.html", "public/index.html");
 
 mix.sass("resources/sass/app.sass", "public/css/app.css");
+
 // mix.purgeCss({
 //     // folders: ['resources', 'resources/views']
 // });

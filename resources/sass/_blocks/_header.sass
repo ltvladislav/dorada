@@ -1,5 +1,5 @@
 header
-    position: fixed
+    //position: fixed
     top: 0
     left: 0
     right: 0
@@ -10,14 +10,8 @@ header
     justify-content: flex-start
     align-items: center
     transition: 0.3s ease
-    +mediaSize(desktop)
-        padding: 0 get-vw(70px)
-    +mediaSize(float)
-        padding: 0 get-vw(70px)
-    +mediaSize(1200)
-        padding: 0 get-vw(70px)
-    +mediaSize(1024)
-        padding: 5px 50px
+    box-shadow: 0 3px 5px rgba(0,0,0,.2)
+
 
 
 header.scrolled
@@ -25,18 +19,12 @@ header.scrolled
 
 .logo-wrap
     display: flex
-    +mediaSize(desktop)
-        width: get-vw(100px)
-        height: get-vw(70px)
-        margin-right: get-vw(40px)
-    +mediaSize(float)
-        width: get-vw(100px)
-        height: get-vw(70px)
-        margin-right: get-vw(40px)
-    +mediaSize(1200)
-        width: get-vw(100px)
-        height: get-vw(70px)
-        margin-right: get-vw(40px)
+    flex-shrink: 0
+    width: get-vw(270px)
+    height: get-vw(90px)
+    margin-right: get-vw(40px)
+    margin-left: get-vw(50px)
+
     +mediaSize(1024)
         width: 80px
         height: 70px
@@ -57,8 +45,6 @@ header nav
 
 .nav-item
     position: relative
-
-
 
 .sub-nav
     position: absolute
@@ -93,15 +79,15 @@ header nav
     padding-top: get-vw(15px)
 
 .nav-link
-    font-family: $raleway
+    //font-family: $raleway
     display: flex
     color: #777
     position: relative
     transition: 0.3s ease
     line-height: 1.3
     +letterSpace(75)
-    font-size: get-vw(18px)
-    padding: get-vw(40px) get-vw(30px) get-vw(30px)
+    font-size: get-vw(20px)
+    padding: get-vw(20px) get-vw(30px) get-vw(25px)
 
 
 .nav-link span
@@ -115,10 +101,10 @@ header nav
     top: 100%
     transition: 0.3s ease
     left: 0
-    background: $lightBlue
+    background: #043511
 
 .nav-item:hover .nav-link
-    color: $lightBlue
+    color: #043511
     & span:before
         width: 100%
 
@@ -139,6 +125,60 @@ header nav
 //    +mediaSize(1200)
 //        height: get-vw(35px)
 //        width: get-vw(30px)
+
+.header-socials
+    display: flex
+    align-items: center
+    width: 100%
+    justify-content: space-between
+    border-bottom: 1px solid #c1c1c1
+
+
+    padding: get-vw(15px) get-vw(50px) get-vw(15px) get-vw(35px)
+
+.header-socials-list
+    display: flex
+    align-items: center
+
+.header-socials-list a
+    display: flex
+    align-items: center
+    font-size: get-vw(14px)
+
+.header-socials-list a + a
+    margin-left: get-vw(25px)
+
+.header-socials-list a img
+    width: get-vw(20px)
+    opacity: 0.7
+    height: get-vw(20px)
+
+.header-socials-list a img + span
+    margin-left:  get-vw(10px)
+
+.header-login
+    display: flex
+    margin-left: auto
+
+.header-login a
+    display: flex
+    align-items: center
+    justify-content: center
+    width: get-vw(35px)
+    height: get-vw(35px)
+
+.header-nav
+    display: flex
+    align-items: center
+
+    padding-right: get-vw(50px)
+
+.main-header
+    width: 100%
+    border-left: 1px solid #c1c1c1
+
+
+
 
 
 
