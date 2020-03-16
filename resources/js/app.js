@@ -107,7 +107,10 @@ document.addEventListener('DOMContentLoaded', function (event) {
             infinite: true,
             dots: false,
             prevArrow: prevArrow,
-            nextArrow: nextArrow
+            nextArrow: nextArrow,
+            autoplay: true,
+            autoplaySpeed: 3800,
+            pauseOnHover: false
         })
     })
 });

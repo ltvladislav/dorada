@@ -20,4 +20,6 @@
             <svg> <use xlink:href="#user"> </use></svg>
         </a>
     </div>
+
+    @include('includes.languages')
 </div>
