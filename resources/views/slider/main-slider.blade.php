@@ -1,6 +1,7 @@
 <div class="main-slider-wrap">
     <div class="main-slider">
         <div class="slide-wrap">
+            <div class="overlay"></div>
             <img src="{{ asset('/image/slide1.jpg') }}" alt="">
             <div class="slide-content">
                 <p class="slide-title"> Сільськогосподарське дорадництво</p>
@@ -9,6 +10,7 @@
             </div>
         </div>
         <div class="slide-wrap">
+            <div class="overlay"></div>
             <img src="{{ asset('/image/slide2.jpg') }}" alt="">
             <div class="slide-content">
                 <p class="slide-title">Дорадництво допоможе розвитку малого фермерства в Україні</p>
@@ -17,5 +19,5 @@
             </div>
         </div>
     </div>
-    <div class="overlay"></div>
+
 </div>

@@ -3109,10 +3109,8 @@ if (!window.site.hasOwnProperty("headerHeight")) {
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
-  console.log("Loaded");
   loadAndResize();
   Object(_delta_functions__WEBPACK_IMPORTED_MODULE_0__["isExist"])('.main-slider', function () {
-    console.log("Hello");
     var slider = document.querySelector('.main-slider');
     jquery__WEBPACK_IMPORTED_MODULE_1___default()(slider).slick({
       infinite: true,

@@ -96,12 +96,11 @@ if (!window.site.hasOwnProperty("headerHeight")) {
 }
 
 document.addEventListener('DOMContentLoaded', function (event) {
-    console.log("Loaded")
 
     loadAndResize();
 
     isExist('.main-slider', () => {
-        console.log("Hello")
+
         let slider = document.querySelector('.main-slider');
 
         $(slider).slick({
