@@ -4,14 +4,12 @@
             <span>Послуги</span>
         </a>
         <div class="sub-nav">
-
             <a href="#" class="sub-nav-item">
                 Підпункт 1
             </a>
             <a href="#" class="sub-nav-item">
                 Підпункт 2
             </a>
-
         </div>
     </div>
 

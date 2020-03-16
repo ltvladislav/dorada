@@ -1,0 +1,78 @@
+.main-slider .slick-list,
+.main-slider .slick-track,
+.main-slider .slick-slide > div,
+.main-slider .slick-slide
+    height: 100%
+
+.main-slider .slide-wrap img
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+.main-slider .slide-wrap
+    position: relative
+
+.main-slider .slide-content
+    position: absolute
+    top: 50%
+    transform: translate(-50%, -50%)
+    left: 50%
+    width: 70%
+    display: flex
+    flex-direction: column
+    align-items: center
+
+.main-slider .slide-title
+    font-size: get-vw(32px)
+    color: #fff
+    text-align: center
+
+.main-slider .slide-subtitle
+    font-size: get-vw(20px)
+    color: #fff
+    text-align: center
+    margin-top: get-vw(20px)
+
+.main-slider .slide-arrow
+    display: flex
+    position: absolute
+    cursor: pointer
+    z-index: 10
+    +mediaSize(desktop)
+        width: get-vw(50px)
+        height: get-vw(50px)
+    +mediaSize(float)
+        width: get-vw(50px)
+        height: get-vw(50px)
+    +mediaSize(1200)
+        width: get-vw(50px)
+        height: get-vw(50px)
+
+
+
+.main-slider .slide-arrow.prev
+    transform: rotate(180deg)
+    left: 50px
+    top: 50%
+
+.main-slider .slide-arrow.next
+    right: 50px
+    top: 50%
+
+a.more
+    background: #00521b
+    color: #fff
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: get-vw(10px) get-vw(25px)
+    border-radius: get-vw(10px)
+
+.main-slider .more
+    margin-top: get-vw(30px)
+
+
+
+
+
+

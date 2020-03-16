@@ -10,7 +10,7 @@
     <title>@yield('title') - {{ setting('site.title') }}</title>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+{{--    <script src="{{ asset('js/app.js') }}" defer></script>--}}
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -18,6 +18,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <script>
+        console.log("Hello")
+        window.site = {
+
+
+        };
+    </script>
 
     {{--    @include('includes.head-icons')--}}
 {{--    <link rel="shortcut icon" href="{{ App\Traits\Imageable::getImageByColumnValue(setting('site.logo'), true) }}" type="image/svg">--}}
@@ -39,8 +47,8 @@
 
 @include('includes.svg')
 
-{{--<script defer src="{{mix('js/manifest.js')}}"></script>--}}
-{{--<script defer src="{{mix('js/vendor.js')}}"></script>--}}
+<script defer src="{{mix('js/manifest.js')}}"></script>
+<script defer src="{{mix('js/vendor.js')}}"></script>
 <script defer src="{{mix('js/app.js')}}"></script>
 {{--<script defer src="{{mix('js/Helper.js')}}"></script>--}}
 {{--<script defer src="{{mix('js/ajax-module.js')}}"></script>--}}

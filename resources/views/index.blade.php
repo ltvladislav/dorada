@@ -12,7 +12,7 @@
 
 @section('content')
 
-hello
+    @include('slider.main-slider')
 
 @stop
 
