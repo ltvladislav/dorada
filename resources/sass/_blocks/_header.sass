@@ -12,8 +12,6 @@ header
     transition: 0.3s ease
     box-shadow: 0 3px 5px rgba(0,0,0,.2)
 
-
-
 header.scrolled
     box-shadow: 0 3px 10px rgba(0,0,0,.15)
 
@@ -89,23 +87,9 @@ header nav
     font-size: get-vw(18px)
     padding: get-vw(15px) get-vw(30px) get-vw(15px)
 
-.nav-link span
-    position: relative
-
-.nav-link span:before
-    content: ''
-    width: 0
-    position: absolute
-    height: 1px
-    top: 100%
-    transition: 0.3s ease
-    left: 0
-    background: #054015
-
 .nav-item:hover .nav-link
     color: #054015
-    & span:before
-        width: 100%
+
 
 .nav-item:hover .sub-nav
     transform: translate(0, 0)
@@ -161,8 +145,8 @@ header nav
     display: flex
     align-items: center
     justify-content: center
-    width: get-vw(35px)
-    height: get-vw(35px)
+    width: get-vw(25px)
+    height: get-vw(25px)
 
 .header-nav
     display: flex
@@ -173,6 +157,15 @@ header nav
 .main-header
     width: 100%
     border-left: 1px solid #c1c1c1
+
+.languages,
+.additional-langs
+    display: flex
+    align-items: center
+
+.languages a
+    margin-right: get-vw(5px)
+    text-transform: uppercase
 
 
 

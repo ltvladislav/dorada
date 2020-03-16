@@ -14,6 +14,10 @@
 
     @include('slider.main-slider')
 
+    @include('infoblock.about')
+
+    @include('infoblock.partners')
+
 @stop
 
 @section('after_content')
