@@ -4,15 +4,19 @@
 {{--            <img src="{{ asset('/image/telegram.svg') }}" alt="">--}}
 {{--        </a>--}}
 
-        <a type="mail" href="#">
-            <img src="{{ asset('/image/mail.svg') }}" alt="">
-            <span>example@example.com</span>
-        </a>
+        @foreach(explode(',', setting('contacts.email')) as $email)
+            <a type="mail" href="mailto:{{ $email }}">
+                <img src="{{ asset('/image/mail.svg') }}" alt="">
+                <span>{{ $email }}</span>
+            </a>
+        @endforeach
 
-        <a type="phone" href="#">
-            <img src="{{ asset('/image/phone.svg') }}" alt="">
-            <span>+380 57 577 575 75</span>
-        </a>
+        @foreach(explode(',', setting('contacts.mobile-phone')) as $phone)
+            <a type="phone" href="tel^{{ $phone }}">
+                <img src="{{ asset('/image/phone.svg') }}" alt="">
+                <span>{{ $phone }}</span>
+            </a>
+        @endforeach
     </div>
 
     <div class="header-login">
