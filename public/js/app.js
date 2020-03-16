@@ -3908,8 +3908,8 @@ function isExist(elements, callback) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Program Files\OSPanel\domains\dorada\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\Program Files\OSPanel\domains\dorada\resources\sass\app.sass */"./resources/sass/app.sass");
+__webpack_require__(/*! E:\OpenServer\domains\dorada.com\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! E:\OpenServer\domains\dorada.com\resources\sass\app.sass */"./resources/sass/app.sass");
 
 
 /***/ })
