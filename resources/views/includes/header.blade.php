@@ -7,8 +7,10 @@
 
         <div class="header-nav">
 
-            @include('includes.header-navigation')
-
+{{--            @include('includes.header-navigation')--}}
+            <nav>
+                {{ menu('main-navigation', 'menus/main-navigation') }}
+            </nav>
             <div class="search-btn">
                 <svg><use xlink:href="#search"></use></svg>
             </div>
