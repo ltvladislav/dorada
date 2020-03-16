@@ -1,17 +1,13 @@
 <div class="partners-wrap">
     <p class="block-title">Наші партнери</p>
     <div class="partners-slider">
-        <div class="partner-item">
-            <img src="{{asset('/image/partner1.jpg')}}" alt="">
-        </div>
-        <div class="partner-item">
-            <img src="" alt="">
-        </div>
-        <div class="partner-item">
-            <img src="" alt="">
-        </div>
-        <div class="partner-item">
-            <img src="" alt="">
-        </div>
+        @for($i = 0; $i<10; $i++)
+            <div class="partner-slide-wrap">
+                <a href="#" class="partner-item">
+                    <img src="{{asset('/image/partner1.jpg')}}" alt="">
+                </a>
+            </div>
+        @endfor
+
     </div>
 </div>
