@@ -3,13 +3,25 @@
 
 .block-title
     width: 65%
+    position: relative
     text-align: center
     font-size: get-vw(30px)
+    padding-bottom: get-vw(15px)
     margin-bottom: get-vw(40px)
     font-weight: 600
     color: #000
     margin-left: auto
     margin-right: auto
+
+.block-title:after
+    content: ''
+    position: absolute
+    top: 100%
+    left: 50%
+    width: get-vw(160px)
+    height: 2px
+    background: #00521b
+    transform: translate(-50%, 0)
 
 .partners-slider
     position: relative
@@ -37,9 +49,14 @@
 
 .partners-wrap .partner-item
     height: get-vw(250px)
+    margin: get-vw(20px) get-vw(10px)
     display: flex
+    box-shadow: 0 2px 4px rgba(0,0,0,.15)
     align-items: center
     justify-content: center
+
+.partner-item:hover
+    box-shadow: 0 5px 10px rgba(0,0,0,.2)
 
 .partners-wrap .partner-item img
     width: 100%

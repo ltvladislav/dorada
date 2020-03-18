@@ -16,7 +16,10 @@
 
     @include('infoblock.about')
 
+    @include('infoblock.services')
+
     @include('infoblock.partners')
+
 
 @stop
 
