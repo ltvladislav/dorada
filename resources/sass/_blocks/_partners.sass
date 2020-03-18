@@ -13,6 +13,11 @@
     margin-left: auto
     margin-right: auto
 
+.block-title.left
+    width: 100%
+    text-align: left
+    position: relative
+
 .block-title:after
     content: ''
     position: absolute
@@ -22,6 +27,10 @@
     height: 2px
     background: #00521b
     transform: translate(-50%, 0)
+
+.block-title.left:after
+    left: 0
+    transform: none
 
 .partners-slider
     position: relative

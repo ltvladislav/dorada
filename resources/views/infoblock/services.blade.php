@@ -1,5 +1,5 @@
 <div class="service-wrap">
-    <p class="block-title">Наші послуги</p>
+    <p class="block-title left">Наші послуги</p>
     <div class="service-slider">
 
         <div class="service-slide">
