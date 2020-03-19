@@ -20,6 +20,8 @@
 
     @include('infoblock.partners')
 
+    @include('infoblock.services2')
+
 
 @stop
 

@@ -1,5 +1,5 @@
 <div class="partners-wrap">
-    <p class="block-title">Наші партнери</p>
+    <p class="block-title left">Наші партнери</p>
     <div class="partners-slider">
         @for($i = 0; $i<10; $i++)
             <div class="partner-slide-wrap">
