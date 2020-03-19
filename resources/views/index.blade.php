@@ -22,6 +22,8 @@
 
     @include('infoblock.services2')
 
+    @include('includes.news-preview')
+
 
 @stop
 
