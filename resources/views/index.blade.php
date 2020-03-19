@@ -23,7 +23,14 @@
 
     @include('infoblock.about')
 
+    @include('infoblock.services')
+
     @include('infoblock.partners')
+
+    @include('infoblock.services2')
+
+    @include('includes.news-preview')
+
 
 @stop
 
