@@ -7,7 +7,14 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title') - {{ setting('site.title') }}</title>
+    @php
+        $title = setting('site.title-' . LaravelLocalization::getCurrentLocale());
+        if (empty($title)) {
+            $title = setting('site.title');
+        }
+    @endphp
+
+    <title>@yield('title') - {{ $title }}</title>
 
     <!-- Scripts -->
 {{--    <script src="{{ asset('js/app.js') }}" defer></script>--}}
