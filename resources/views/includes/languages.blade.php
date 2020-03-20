@@ -1,7 +1,12 @@
+
 <div class="languages">
-    <a class="active-lang">UK</a>
+    @php($current_locale = LaravelLocalization::getCurrentLocale())
+    <a class="active-lang">{{ $current_locale }}</a>
     <div class="additional-langs">
-        <a href="#">Ru</a>
-        <a href="#">EN</a>
+        @foreach(LaravelLocalization::getSupportedLanguagesKeys() as $localeCode)
+            @if($current_locale != $localeCode)
+                <a class="" lang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode) }}">{{$localeCode}}</a>
+            @endif
+        @endforeach
     </div>
 </div>
