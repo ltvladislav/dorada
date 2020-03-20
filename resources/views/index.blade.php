@@ -31,6 +31,8 @@
 
     @include('includes.news-preview')
 
+    @include('infoblock.additional-block')
+
 
 @stop
 

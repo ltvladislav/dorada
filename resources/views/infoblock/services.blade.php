@@ -11,7 +11,7 @@
             <a href="#" class="more">Читати далі</a>
         </div>
 
-        <div class="service-slide orange" >
+        <div class="service-slide " >
             <div class="service-icon">
                 <img src=" {{asset('/image/help.svg') }}" alt="">
             </div>
@@ -20,7 +20,7 @@
             <a href="#"  class="more">Читати далі</a>
         </div>
 
-        <div class="service-slide blue">
+        <div class="service-slide ">
             <div class="service-icon">
                 <img src=" {{asset('/image/hr.svg') }}" alt="">
             </div>
