@@ -44,7 +44,7 @@
 
         <div class="news-card">
             <div class="news-image">
-                <img src="{{ asset('/image/new1.jpg') }}" alt="">
+                <img src="{{ asset('/image/new3.jpg') }}" alt="">
             </div>
             <div class="new-card-content">
                 <div class="new-additional-info">

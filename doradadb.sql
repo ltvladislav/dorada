@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Час створення: Бер 14 2020 р., 18:13
+-- Час створення: Бер 20 2020 р., 21:24
 -- Версія сервера: 10.3.13-MariaDB
 -- Версія PHP: 7.3.2
 
@@ -127,7 +127,65 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (52, 6, 'status', 'select_dropdown', 'Status', 1, 1, 1, 1, 1, 1, '{\"default\":\"INACTIVE\",\"options\":{\"INACTIVE\":\"INACTIVE\",\"ACTIVE\":\"ACTIVE\"}}', 9),
 (53, 6, 'created_at', 'timestamp', 'Created At', 1, 1, 1, 0, 0, 0, NULL, 10),
 (54, 6, 'updated_at', 'timestamp', 'Updated At', 1, 0, 0, 0, 0, 0, NULL, 11),
-(55, 6, 'image', 'image', 'Page Image', 0, 1, 1, 1, 1, 1, NULL, 12);
+(55, 6, 'image', 'image', 'Page Image', 0, 1, 1, 1, 1, 1, NULL, 12),
+(100, 10, 'id', 'number', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(101, 10, 'name', 'text', 'Назва', 1, 1, 1, 1, 1, 1, '{}', 2),
+(102, 10, 'blade_path', 'text', 'Шлях до файлу', 1, 1, 1, 1, 1, 0, '{}', 3),
+(103, 10, 'public', 'checkbox', 'Public', 1, 1, 1, 1, 1, 0, '{}', 4),
+(104, 10, 'with_items', 'checkbox', 'With Items', 1, 1, 1, 1, 1, 0, '{}', 5),
+(105, 10, 'with_item_parent', 'checkbox', 'With Item Parent', 1, 0, 1, 1, 1, 0, '{}', 6),
+(106, 10, 'created_at', 'timestamp', 'Created At', 0, 0, 1, 0, 0, 1, '{}', 7),
+(107, 10, 'updated_at', 'timestamp', 'Updated At', 0, 0, 1, 0, 0, 0, '{}', 8),
+(108, 11, 'id', 'number', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(109, 11, 'name', 'text', 'Назва', 1, 1, 1, 1, 1, 1, '{}', 3),
+(110, 11, 'slug', 'text', 'Slug', 1, 1, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"name\"},\"validation\":{\"rule\":\"unique:infoblocks,slug\"}}', 4),
+(111, 11, 'type_id', 'select_dropdown', 'Type Id', 0, 0, 1, 1, 1, 1, '{}', 2),
+(112, 11, 'title', 'text', 'Заголовок', 0, 0, 1, 1, 1, 0, '{}', 5),
+(113, 11, 'sub_title', 'text', 'Підзаголовок', 0, 0, 1, 1, 1, 0, '{}', 6),
+(114, 11, 'body', 'rich_text_box', 'Текст', 0, 0, 1, 1, 1, 0, '{}', 7),
+(115, 11, 'button_title', 'text', 'Заголовок кнопки', 0, 0, 1, 1, 1, 0, '{}', 8),
+(116, 11, 'button_link', 'text', 'Посилання кнопки', 0, 0, 1, 1, 1, 0, '{}', 9),
+(117, 11, 'image', 'image', 'Картинка', 0, 1, 1, 1, 1, 0, '{}', 10),
+(118, 11, 'created_at', 'timestamp', 'Created At', 0, 0, 1, 0, 0, 1, '{}', 11),
+(119, 11, 'updated_at', 'timestamp', 'Updated At', 0, 0, 1, 0, 0, 0, '{}', 12),
+(120, 11, 'infoblock_belongsto_infoblock_type_relationship', 'relationship', 'Тип', 0, 1, 1, 1, 1, 1, '{\"model\":\"App\\\\Models\\\\Infoblocks\\\\InfoblockType\",\"table\":\"infoblock_types\",\"type\":\"belongsTo\",\"column\":\"type_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 13),
+(121, 11, 'infoblock_hasmany_infoblock_item_relationship', 'relationship', 'Елементи', 0, 1, 1, 1, 1, 1, '{\"isItems\":true,\"dataTypeSlug\":\"infoblock-items\",\"itemsProperty\":\"items\",\"itemsVisibleMethod\":\"typeWithItems\",\"model\":\"App\\\\Models\\\\Infoblocks\\\\InfoblockItem\",\"table\":\"infoblock_items\",\"type\":\"hasMany\",\"column\":\"infoblock_id\",\"key\":\"id\",\"label\":\"title\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 14),
+(122, 12, 'id', 'number', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(123, 12, 'infoblock_id', 'select_dropdown', 'Infoblock Id', 1, 0, 1, 1, 1, 1, '{}', 2),
+(124, 12, 'parent_id', 'select_dropdown', 'Parent Id', 0, 0, 1, 1, 1, 1, '{}', 3),
+(125, 12, 'title', 'text', 'Заголовок', 0, 1, 1, 1, 1, 0, '{}', 4),
+(126, 12, 'sub_title', 'text', 'Підзаголовок', 0, 0, 1, 1, 1, 0, '{}', 5),
+(127, 12, 'image', 'file', 'Картинка', 0, 1, 1, 1, 1, 1, '{}', 6),
+(128, 12, 'button_title', 'text', 'Заголовок кнопки', 0, 0, 1, 1, 1, 0, '{}', 7),
+(129, 12, 'button_link', 'text', 'Посилання кнопки', 0, 0, 1, 1, 1, 0, '{}', 8),
+(130, 12, 'body', 'text_area', 'Інформація', 0, 0, 1, 1, 1, 0, '{}', 9),
+(131, 12, 'order', 'number', 'Порядковий номер', 1, 1, 1, 1, 1, 1, '{}', 10),
+(132, 12, 'created_at', 'timestamp', 'Created At', 0, 0, 1, 0, 0, 1, '{}', 11),
+(133, 12, 'updated_at', 'timestamp', 'Updated At', 0, 0, 1, 0, 0, 0, '{}', 12),
+(134, 12, 'infoblock_item_belongsto_infoblock_relationship', 'relationship', 'Інфоблок', 0, 1, 1, 1, 1, 1, '{\"isItemsParent\":true,\"parentDataTypeSlug\":\"infoblocks\",\"model\":\"App\\\\Models\\\\Infoblocks\\\\Infoblock\",\"table\":\"infoblocks\",\"type\":\"belongsTo\",\"column\":\"infoblock_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 13),
+(135, 12, 'infoblock_item_hasmany_infoblock_item_relationship', 'relationship', 'Дочірні елементи', 0, 1, 1, 1, 1, 1, '{\"isChildItems\":true,\"childItemsProperty\":\"children\",\"model\":\"App\\\\Models\\\\Infoblocks\\\\InfoblockItem\",\"table\":\"infoblock_items\",\"type\":\"hasMany\",\"column\":\"parent_id\",\"key\":\"id\",\"label\":\"title\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 14),
+(136, 13, 'id', 'number', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(137, 13, 'name', 'text', 'Назва', 1, 1, 1, 1, 1, 1, '{}', 2),
+(138, 13, 'svg', 'file', 'Svg', 1, 1, 1, 1, 1, 0, '{}', 3),
+(139, 13, 'link', 'text', 'Посилання', 1, 1, 1, 1, 1, 0, '{}', 4),
+(140, 13, 'created_at', 'timestamp', 'Created At', 0, 0, 1, 0, 0, 1, '{}', 5),
+(141, 13, 'updated_at', 'timestamp', 'Updated At', 0, 0, 1, 0, 0, 0, '{}', 6),
+(142, 14, 'id', 'number', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(143, 14, 'name', 'text', 'Назва', 1, 1, 1, 1, 1, 1, '{}', 2),
+(144, 14, 'slug', 'text', 'Slug', 1, 1, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"name\"},\"validation\":{\"rule\":\"unique:galleries,slug\"}}', 3),
+(145, 14, 'title', 'text', 'Заголовок', 0, 0, 1, 1, 1, 0, '{}', 4),
+(146, 14, 'sub_title', 'text', 'Підзаголовок', 0, 0, 1, 1, 1, 0, '{}', 5),
+(147, 14, 'created_at', 'timestamp', 'Created At', 0, 0, 1, 0, 0, 1, '{}', 6),
+(148, 14, 'updated_at', 'timestamp', 'Updated At', 0, 0, 1, 0, 0, 0, '{}', 7),
+(149, 14, 'gallery_hasmany_gallery_image_relationship', 'relationship', 'Фото', 0, 0, 1, 1, 1, 1, '{\"isItems\":true,\"dataTypeSlug\":\"gallery-images\",\"itemsProperty\":\"images\",\"model\":\"App\\\\Models\\\\Galleries\\\\GalleryImage\",\"table\":\"gallery_images\",\"type\":\"hasMany\",\"column\":\"gallery_id\",\"key\":\"id\",\"label\":\"caption\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 8),
+(150, 15, 'id', 'number', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
+(151, 15, 'gallery_id', 'number', 'Gallery Id', 1, 0, 1, 1, 1, 1, '{}', 2),
+(152, 15, 'image', 'image', 'Фото', 1, 1, 1, 1, 1, 1, '{}', 3),
+(153, 15, 'caption', 'text', 'Заголовок', 0, 1, 1, 1, 1, 1, '{}', 4),
+(154, 15, 'order', 'number', 'Порядковий номер', 1, 0, 0, 0, 0, 0, '{}', 5),
+(155, 15, 'created_at', 'timestamp', 'Created At', 0, 0, 1, 0, 0, 1, '{}', 6),
+(156, 15, 'updated_at', 'timestamp', 'Updated At', 0, 0, 1, 0, 0, 0, '{}', 7),
+(157, 15, 'gallery_image_belongsto_gallery_relationship', 'relationship', 'Галерея', 0, 1, 1, 1, 1, 1, '{\"isItemsParent\":true,\"parentDataTypeSlug\":\"galleries\",\"model\":\"App\\\\Models\\\\Galleries\\\\Gallery\",\"table\":\"galleries\",\"type\":\"belongsTo\",\"column\":\"gallery_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 8);
 
 -- --------------------------------------------------------
 
@@ -163,7 +221,13 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController', '', 1, 0, NULL, '2020-03-10 17:24:10', '2020-03-10 17:24:10'),
 (4, 'categories', 'categories', 'Category', 'Categories', 'voyager-categories', 'TCG\\Voyager\\Models\\Category', NULL, '', '', 1, 0, NULL, '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
 (5, 'posts', 'posts', 'Post', 'Posts', 'voyager-news', 'TCG\\Voyager\\Models\\Post', 'TCG\\Voyager\\Policies\\PostPolicy', '', '', 1, 0, NULL, '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
-(6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, '', '', 1, 0, NULL, '2020-03-10 17:24:27', '2020-03-10 17:24:27');
+(6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, '', '', 1, 0, NULL, '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
+(10, 'infoblock_types', 'infoblock-types', 'Тип інфоблоків', 'Типи інфоблоків', 'voyager-categories', 'App\\Models\\Infoblocks\\InfoblockType', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-03-15 19:00:13', '2020-03-15 19:25:52'),
+(11, 'infoblocks', 'infoblocks', 'Інфоблок', 'Інфоблоки', 'voyager-photos', 'App\\Models\\Infoblocks\\Infoblock', NULL, 'App\\Http\\Controllers\\WithItemsBase\\BaseWithItemsController', NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-03-15 19:05:35', '2020-03-15 19:27:43'),
+(12, 'infoblock_items', 'infoblock-items', 'Елемент інфоблоку', 'Елементи інфоблоків', 'voyager-photo', 'App\\Models\\Infoblocks\\InfoblockItem', NULL, 'App\\Http\\Controllers\\WithItemsBase\\BaseItemController', NULL, 1, 0, '{\"order_column\":\"order\",\"order_display_column\":\"title\",\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-03-15 19:15:20', '2020-03-15 19:27:02'),
+(13, 'social_networks', 'social-networks', 'Соцільна мережа', 'Соціальні мережі', 'voyager-facebook', 'App\\Models\\SocialNetwork', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2020-03-16 18:39:44', '2020-03-16 18:39:44'),
+(14, 'galleries', 'galleries', 'Галерея', 'Галереї', 'voyager-photos', 'App\\Models\\Galleries\\Gallery', NULL, 'App\\Http\\Controllers\\WithItemsBase\\BaseWithItemsController', NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-03-19 19:29:21', '2020-03-19 19:31:19'),
+(15, 'gallery_images', 'gallery-images', 'Фото галереї', 'Фото галереї', 'voyager-photo', 'App\\Models\\Galleries\\GalleryImage', NULL, 'App\\Http\\Controllers\\WithItemsBase\\BaseItemController', NULL, 1, 0, '{\"order_column\":\"order\",\"order_display_column\":\"caption\",\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-03-19 19:34:03', '2020-03-19 19:36:06');
 
 -- --------------------------------------------------------
 
@@ -183,6 +247,111 @@ CREATE TABLE `failed_jobs` (
 -- --------------------------------------------------------
 
 --
+-- Структура таблиці `galleries`
+--
+
+CREATE TABLE `galleries` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sub_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблиці `gallery_images`
+--
+
+CREATE TABLE `gallery_images` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `gallery_id` int(10) UNSIGNED NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `caption` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `order` int(11) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблиці `infoblocks`
+--
+
+CREATE TABLE `infoblocks` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type_id` int(10) UNSIGNED DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sub_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `body` text COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `button_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `button_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп даних таблиці `infoblocks`
+--
+
+INSERT INTO `infoblocks` (`id`, `name`, `slug`, `type_id`, `title`, `sub_title`, `body`, `button_title`, `button_link`, `image`, `created_at`, `updated_at`) VALUES
+(1, 'Опис (головна)', 'opis-golovna', 1, 'DORADA.ORG', '', '<p>Метою діяльності Асоціації є сприяння покращенню добробуту сільського населення та розвитку сільської місцевості через підвищення рівня знань і вдосконалення практичних навичок сільського населення та сільськогосподарських товаровиробників, задоволення та захист соціальних, економічних, фахових та інших спільних інтересів членів Асоціації.</p>', 'Дізнатись більше', '', NULL, '2020-03-15 19:52:26', '2020-03-15 19:52:26');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблиці `infoblock_items`
+--
+
+CREATE TABLE `infoblock_items` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `infoblock_id` int(10) UNSIGNED NOT NULL,
+  `parent_id` int(10) UNSIGNED DEFAULT NULL,
+  `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sub_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `button_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `button_link` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `body` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `order` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблиці `infoblock_types`
+--
+
+CREATE TABLE `infoblock_types` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `blade_path` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `public` tinyint(1) NOT NULL,
+  `with_items` tinyint(1) NOT NULL,
+  `with_item_parent` tinyint(1) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп даних таблиці `infoblock_types`
+--
+
+INSERT INTO `infoblock_types` (`id`, `name`, `blade_path`, `public`, `with_items`, `with_item_parent`, `created_at`, `updated_at`) VALUES
+(1, 'About', 'about', 0, 0, 0, '2020-03-15 19:50:16', '2020-03-15 19:50:16');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблиці `menus`
 --
 
@@ -198,7 +367,8 @@ CREATE TABLE `menus` (
 --
 
 INSERT INTO `menus` (`id`, `name`, `created_at`, `updated_at`) VALUES
-(1, 'admin', '2020-03-10 17:24:10', '2020-03-10 17:24:10');
+(1, 'admin', '2020-03-10 17:24:10', '2020-03-10 17:24:10'),
+(2, 'main-navigation', '2020-03-16 18:52:08', '2020-03-16 18:52:08');
 
 -- --------------------------------------------------------
 
@@ -227,20 +397,41 @@ CREATE TABLE `menu_items` (
 --
 
 INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class`, `color`, `parent_id`, `order`, `created_at`, `updated_at`, `route`, `parameters`) VALUES
-(1, 1, 'Dashboard', '', '_self', 'voyager-boat', NULL, NULL, 1, '2020-03-10 17:24:10', '2020-03-10 17:24:10', 'voyager.dashboard', NULL),
-(2, 1, 'Media', '', '_self', 'voyager-images', NULL, NULL, 5, '2020-03-10 17:24:10', '2020-03-10 17:24:10', 'voyager.media.index', NULL),
-(3, 1, 'Users', '', '_self', 'voyager-person', NULL, NULL, 3, '2020-03-10 17:24:10', '2020-03-10 17:24:10', 'voyager.users.index', NULL),
-(4, 1, 'Roles', '', '_self', 'voyager-lock', NULL, NULL, 2, '2020-03-10 17:24:10', '2020-03-10 17:24:10', 'voyager.roles.index', NULL),
-(5, 1, 'Tools', '', '_self', 'voyager-tools', NULL, NULL, 9, '2020-03-10 17:24:10', '2020-03-10 17:24:10', NULL, NULL),
-(6, 1, 'Menu Builder', '', '_self', 'voyager-list', NULL, 5, 10, '2020-03-10 17:24:10', '2020-03-10 17:24:10', 'voyager.menus.index', NULL),
-(7, 1, 'Database', '', '_self', 'voyager-data', NULL, 5, 11, '2020-03-10 17:24:10', '2020-03-10 17:24:10', 'voyager.database.index', NULL),
-(8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 12, '2020-03-10 17:24:10', '2020-03-10 17:24:10', 'voyager.compass.index', NULL),
-(9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 13, '2020-03-10 17:24:10', '2020-03-10 17:24:10', 'voyager.bread.index', NULL),
-(10, 1, 'Settings', '', '_self', 'voyager-settings', NULL, NULL, 14, '2020-03-10 17:24:10', '2020-03-10 17:24:10', 'voyager.settings.index', NULL),
-(11, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 13, '2020-03-10 17:24:11', '2020-03-10 17:24:11', 'voyager.hooks', NULL),
-(12, 1, 'Categories', '', '_self', 'voyager-categories', NULL, NULL, 8, '2020-03-10 17:24:27', '2020-03-10 17:24:27', 'voyager.categories.index', NULL),
-(13, 1, 'Posts', '', '_self', 'voyager-news', NULL, NULL, 6, '2020-03-10 17:24:27', '2020-03-10 17:24:27', 'voyager.posts.index', NULL),
-(14, 1, 'Pages', '', '_self', 'voyager-file-text', NULL, NULL, 7, '2020-03-10 17:24:27', '2020-03-10 17:24:27', 'voyager.pages.index', NULL);
+(1, 1, 'Панель управління', '', '_self', 'voyager-boat', '#000000', NULL, 1, '2020-03-10 17:24:10', '2020-03-15 19:29:38', 'voyager.dashboard', 'null'),
+(2, 1, 'Медіа', '', '_self', 'voyager-images', '#000000', NULL, 3, '2020-03-10 17:24:10', '2020-03-16 18:02:14', 'voyager.media.index', 'null'),
+(3, 1, 'Користувачі', '', '_self', 'voyager-person', '#000000', 24, 2, '2020-03-10 17:24:10', '2020-03-16 18:02:05', 'voyager.users.index', 'null'),
+(4, 1, 'Ролі', '', '_self', 'voyager-lock', '#000000', 24, 1, '2020-03-10 17:24:10', '2020-03-16 18:02:04', 'voyager.roles.index', 'null'),
+(5, 1, 'Налаштування', '', '_self', 'voyager-tools', '#000000', NULL, 8, '2020-03-10 17:24:10', '2020-03-19 19:37:13', NULL, ''),
+(6, 1, 'Налаштування Меню', '', '_self', 'voyager-list', '#000000', 5, 1, '2020-03-10 17:24:10', '2020-03-15 19:30:14', 'voyager.menus.index', 'null'),
+(7, 1, 'База даних', '', '_self', 'voyager-data', '#000000', 5, 2, '2020-03-10 17:24:10', '2020-03-15 19:30:26', 'voyager.database.index', 'null'),
+(8, 1, 'Compass', '', '_self', 'voyager-compass', NULL, 5, 3, '2020-03-10 17:24:10', '2020-03-14 15:46:24', 'voyager.compass.index', NULL),
+(9, 1, 'BREAD', '', '_self', 'voyager-bread', NULL, 5, 4, '2020-03-10 17:24:10', '2020-03-14 15:46:24', 'voyager.bread.index', NULL),
+(10, 1, 'Системні налаштування', '', '_self', 'voyager-settings', '#000000', NULL, 9, '2020-03-10 17:24:10', '2020-03-19 19:37:13', 'voyager.settings.index', 'null'),
+(11, 1, 'Hooks', '', '_self', 'voyager-hook', NULL, 5, 5, '2020-03-10 17:24:11', '2020-03-14 15:46:24', 'voyager.hooks', NULL),
+(12, 1, 'Категорії', '', '_self', 'voyager-categories', '#000000', 23, 1, '2020-03-10 17:24:27', '2020-03-15 19:41:08', 'voyager.categories.index', 'null'),
+(13, 1, 'Новини', '', '_self', 'voyager-news', '#000000', 23, 2, '2020-03-10 17:24:27', '2020-03-15 19:41:08', 'voyager.posts.index', 'null'),
+(14, 1, 'Сторінки', '', '_self', 'voyager-file-text', '#000000', NULL, 5, '2020-03-10 17:24:27', '2020-03-16 18:02:05', 'voyager.pages.index', 'null'),
+(19, 1, 'Типи інфоблоків', '', '_self', 'voyager-categories', '#000000', 22, 1, '2020-03-15 19:00:14', '2020-03-15 19:28:44', 'voyager.infoblock-types.index', 'null'),
+(20, 1, 'Інфоблоки', '', '_self', 'voyager-photos', '#000000', 22, 2, '2020-03-15 19:05:35', '2020-03-15 19:28:54', 'voyager.infoblocks.index', 'null'),
+(21, 1, 'Елементи інфоблоків', '', '_self', 'voyager-photo', '#000000', 22, 3, '2020-03-15 19:15:21', '2020-03-15 19:29:03', 'voyager.infoblock-items.index', 'null'),
+(22, 1, 'Інфоблоки', '', '_self', 'voyager-photos', '#000000', NULL, 6, '2020-03-15 19:28:22', '2020-03-16 18:02:05', NULL, ''),
+(23, 1, 'Новини', '', '_self', 'voyager-news', '#000000', NULL, 4, '2020-03-15 19:40:49', '2020-03-16 18:02:05', NULL, ''),
+(24, 1, 'Користувачі', '', '_self', 'voyager-person', '#000000', NULL, 2, '2020-03-16 18:01:52', '2020-03-16 18:02:03', NULL, ''),
+(25, 1, 'Соціальні мережі', '', '_self', 'voyager-facebook', NULL, NULL, 10, '2020-03-16 18:39:45', '2020-03-19 19:37:13', 'voyager.social-networks.index', NULL),
+(26, 2, 'Про асоціацію', '', '_self', NULL, '#000000', NULL, 1, '2020-03-16 18:58:17', '2020-03-16 18:59:32', NULL, ''),
+(27, 2, 'Загальна інформація', '', '_self', NULL, '#000000', 26, 1, '2020-03-16 18:58:42', '2020-03-16 18:59:32', NULL, ''),
+(28, 2, 'Наша команда', '', '_self', NULL, '#000000', 26, 2, '2020-03-16 18:58:51', '2020-03-16 18:59:33', NULL, ''),
+(29, 2, 'Реєстраційні документи', '', '_self', NULL, '#000000', 26, 3, '2020-03-16 18:58:58', '2020-03-16 18:59:34', NULL, ''),
+(30, 2, 'Наша діяльність', '', '_self', NULL, '#000000', 26, 4, '2020-03-16 18:59:05', '2020-03-16 18:59:35', NULL, ''),
+(31, 2, 'Дорадчі служби в регіонах', '', '_self', NULL, '#000000', NULL, 2, '2020-03-16 18:59:42', '2020-03-19 19:50:29', NULL, ''),
+(32, 2, 'Дорадництво', '', '_self', NULL, '#000000', NULL, 3, '2020-03-16 18:59:50', '2020-03-16 19:15:21', NULL, ''),
+(33, 2, 'Послуги', '', '_self', NULL, '#000000', NULL, 4, '2020-03-16 19:04:45', '2020-03-16 19:15:22', NULL, ''),
+(34, 2, 'Консультації', '', '_self', NULL, '#000000', 33, 1, '2020-03-16 19:04:55', '2020-03-16 19:20:43', NULL, ''),
+(35, 2, 'Навчання', '', '_self', NULL, '#000000', 33, 2, '2020-03-16 19:05:02', '2020-03-16 19:20:44', NULL, ''),
+(36, 2, 'Демонстрації', '', '_self', NULL, '#000000', 33, 3, '2020-03-16 19:05:14', '2020-03-16 19:20:45', NULL, ''),
+(37, 1, 'Галереї', '', '_self', 'voyager-photos', NULL, 39, 1, '2020-03-19 19:29:23', '2020-03-19 19:36:52', 'voyager.galleries.index', NULL),
+(38, 1, 'Фото галереї', '', '_self', 'voyager-photo', NULL, 39, 2, '2020-03-19 19:34:03', '2020-03-19 19:36:54', 'voyager.gallery-images.index', NULL),
+(39, 1, 'Галереї', '', '_self', 'voyager-photos', '#000000', NULL, 7, '2020-03-19 19:36:44', '2020-03-19 19:37:13', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -285,7 +476,13 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (24, '2016_01_01_000000_create_pages_table', 3),
 (25, '2016_01_01_000000_create_posts_table', 3),
 (26, '2016_02_15_204651_create_categories_table', 3),
-(27, '2017_04_11_000000_alter_post_nullable_fields_table', 3);
+(27, '2017_04_11_000000_alter_post_nullable_fields_table', 3),
+(28, '2020_01_22_205910_create_infoblock_types_table', 4),
+(29, '2020_01_24_155807_create_infoblocks_table', 4),
+(30, '2020_01_24_161735_create_infoblock_items_table', 4),
+(31, '2020_01_30_203320_create_social_networks_table', 5),
+(32, '2020_02_12_211233_create_galleries_table', 6),
+(33, '2020_02_12_211243_create_gallery_images_table', 6);
 
 -- --------------------------------------------------------
 
@@ -313,7 +510,7 @@ CREATE TABLE `pages` (
 --
 
 INSERT INTO `pages` (`id`, `author_id`, `title`, `excerpt`, `body`, `image`, `slug`, `meta_description`, `meta_keywords`, `status`, `created_at`, `updated_at`) VALUES
-(1, 0, 'Hello World', 'Hang the jib grog grog blossom grapple dance the hempen jig gangway pressgang bilge rat to go on account lugger. Nelsons folly gabion line draught scallywag fire ship gaff fluke fathom case shot. Sea Legs bilge rat sloop matey gabion long clothes run a shot across the bow Gold Road cog league.', '<p>Hello World. Scallywag grog swab Cat o\'nine tails scuttle rigging hardtack cable nipper Yellow Jack. Handsomely spirits knave lad killick landlubber or just lubber deadlights chantey pinnace crack Jennys tea cup. Provost long clothes black spot Yellow Jack bilged on her anchor league lateen sail case shot lee tackle.</p>\r\n<p>Ballast spirits fluke topmast me quarterdeck schooner landlubber or just lubber gabion belaying pin. Pinnace stern galleon starboard warp carouser to go on account dance the hempen jig jolly boat measured fer yer chains. Man-of-war fire in the hole nipperkin handsomely doubloon barkadeer Brethren of the Coast gibbet driver squiffy.</p>', 'pages/page1.jpg', 'hello-world', 'Yar Meta Description', 'Keyword1, Keyword2', 'ACTIVE', '2020-03-10 17:24:27', '2020-03-10 17:24:27');
+(1, 1, 'Привіт світ', 'Hang the jib grog grog blossom grapple dance the hempen jig gangway pressgang bilge rat to go on account lugger. Nelsons folly gabion line draught scallywag fire ship gaff fluke fathom case shot. Sea Legs bilge rat sloop matey gabion long clothes run a shot across the bow Gold Road cog league.', '<p>Hello World. Scallywag grog swab Cat o\'nine tails scuttle rigging hardtack cable nipper Yellow Jack. Handsomely spirits knave lad killick landlubber or just lubber deadlights chantey pinnace crack Jennys tea cup. Provost long clothes black spot Yellow Jack bilged on her anchor league lateen sail case shot lee tackle.</p>\n<p>Ballast spirits fluke topmast me quarterdeck schooner landlubber or just lubber gabion belaying pin. Pinnace stern galleon starboard warp carouser to go on account dance the hempen jig jolly boat measured fer yer chains. Man-of-war fire in the hole nipperkin handsomely doubloon barkadeer Brethren of the Coast gibbet driver squiffy.</p>', 'pages/page1.jpg', 'hello-world', 'Yar Meta Description', 'Keyword1, Keyword2', 'ACTIVE', '2020-03-10 17:24:27', '2020-03-18 16:44:16');
 
 -- --------------------------------------------------------
 
@@ -386,7 +583,37 @@ INSERT INTO `permissions` (`id`, `key`, `table_name`, `created_at`, `updated_at`
 (38, 'read_pages', 'pages', '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
 (39, 'edit_pages', 'pages', '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
 (40, 'add_pages', 'pages', '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
-(41, 'delete_pages', 'pages', '2020-03-10 17:24:27', '2020-03-10 17:24:27');
+(41, 'delete_pages', 'pages', '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
+(42, 'browse_infoblock_types', 'infoblock_types', '2020-03-15 19:00:13', '2020-03-15 19:00:13'),
+(43, 'read_infoblock_types', 'infoblock_types', '2020-03-15 19:00:13', '2020-03-15 19:00:13'),
+(44, 'edit_infoblock_types', 'infoblock_types', '2020-03-15 19:00:13', '2020-03-15 19:00:13'),
+(45, 'add_infoblock_types', 'infoblock_types', '2020-03-15 19:00:13', '2020-03-15 19:00:13'),
+(46, 'delete_infoblock_types', 'infoblock_types', '2020-03-15 19:00:13', '2020-03-15 19:00:13'),
+(47, 'browse_infoblocks', 'infoblocks', '2020-03-15 19:05:35', '2020-03-15 19:05:35'),
+(48, 'read_infoblocks', 'infoblocks', '2020-03-15 19:05:35', '2020-03-15 19:05:35'),
+(49, 'edit_infoblocks', 'infoblocks', '2020-03-15 19:05:35', '2020-03-15 19:05:35'),
+(50, 'add_infoblocks', 'infoblocks', '2020-03-15 19:05:35', '2020-03-15 19:05:35'),
+(51, 'delete_infoblocks', 'infoblocks', '2020-03-15 19:05:35', '2020-03-15 19:05:35'),
+(52, 'browse_infoblock_items', 'infoblock_items', '2020-03-15 19:15:21', '2020-03-15 19:15:21'),
+(53, 'read_infoblock_items', 'infoblock_items', '2020-03-15 19:15:21', '2020-03-15 19:15:21'),
+(54, 'edit_infoblock_items', 'infoblock_items', '2020-03-15 19:15:21', '2020-03-15 19:15:21'),
+(55, 'add_infoblock_items', 'infoblock_items', '2020-03-15 19:15:21', '2020-03-15 19:15:21'),
+(56, 'delete_infoblock_items', 'infoblock_items', '2020-03-15 19:15:21', '2020-03-15 19:15:21'),
+(57, 'browse_social_networks', 'social_networks', '2020-03-16 18:39:44', '2020-03-16 18:39:44'),
+(58, 'read_social_networks', 'social_networks', '2020-03-16 18:39:44', '2020-03-16 18:39:44'),
+(59, 'edit_social_networks', 'social_networks', '2020-03-16 18:39:44', '2020-03-16 18:39:44'),
+(60, 'add_social_networks', 'social_networks', '2020-03-16 18:39:44', '2020-03-16 18:39:44'),
+(61, 'delete_social_networks', 'social_networks', '2020-03-16 18:39:44', '2020-03-16 18:39:44'),
+(62, 'browse_galleries', 'galleries', '2020-03-19 19:29:22', '2020-03-19 19:29:22'),
+(63, 'read_galleries', 'galleries', '2020-03-19 19:29:22', '2020-03-19 19:29:22'),
+(64, 'edit_galleries', 'galleries', '2020-03-19 19:29:22', '2020-03-19 19:29:22'),
+(65, 'add_galleries', 'galleries', '2020-03-19 19:29:22', '2020-03-19 19:29:22'),
+(66, 'delete_galleries', 'galleries', '2020-03-19 19:29:23', '2020-03-19 19:29:23'),
+(67, 'browse_gallery_images', 'gallery_images', '2020-03-19 19:34:03', '2020-03-19 19:34:03'),
+(68, 'read_gallery_images', 'gallery_images', '2020-03-19 19:34:03', '2020-03-19 19:34:03'),
+(69, 'edit_gallery_images', 'gallery_images', '2020-03-19 19:34:03', '2020-03-19 19:34:03'),
+(70, 'add_gallery_images', 'gallery_images', '2020-03-19 19:34:03', '2020-03-19 19:34:03'),
+(71, 'delete_gallery_images', 'gallery_images', '2020-03-19 19:34:03', '2020-03-19 19:34:03');
 
 -- --------------------------------------------------------
 
@@ -444,7 +671,37 @@ INSERT INTO `permission_role` (`permission_id`, `role_id`) VALUES
 (38, 1),
 (39, 1),
 (40, 1),
-(41, 1);
+(41, 1),
+(42, 1),
+(43, 1),
+(44, 1),
+(45, 1),
+(46, 1),
+(47, 1),
+(48, 1),
+(49, 1),
+(50, 1),
+(51, 1),
+(52, 1),
+(53, 1),
+(54, 1),
+(55, 1),
+(56, 1),
+(57, 1),
+(58, 1),
+(59, 1),
+(60, 1),
+(61, 1),
+(62, 1),
+(63, 1),
+(64, 1),
+(65, 1),
+(66, 1),
+(67, 1),
+(68, 1),
+(69, 1),
+(70, 1),
+(71, 1);
 
 -- --------------------------------------------------------
 
@@ -524,16 +781,41 @@ CREATE TABLE `settings` (
 --
 
 INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`, `order`, `group`) VALUES
-(1, 'site.title', 'Site Title', 'Dorada', '', 'text', 1, 'Site'),
-(2, 'site.description', 'Site Description', 'Site Description', '', 'text', 2, 'Site'),
-(3, 'site.logo', 'Site Logo', '', '', 'image', 3, 'Site'),
-(4, 'site.google_analytics_tracking_id', 'Google Analytics Tracking ID', NULL, '', 'text', 4, 'Site'),
+(1, 'site.title', 'Site Title', 'Дорада', '', 'text', 1, 'Site'),
+(2, 'site.description', 'Site Description', 'Site Description', '', 'text', 3, 'Site'),
+(3, 'site.logo', 'Site Logo', '', '', 'image', 4, 'Site'),
+(4, 'site.google_analytics_tracking_id', 'Google Analytics Tracking ID', NULL, '', 'text', 8, 'Site'),
 (5, 'admin.bg_image', 'Admin Background Image', '', '', 'image', 5, 'Admin'),
-(6, 'admin.title', 'Admin Title', 'Voyager', '', 'text', 1, 'Admin'),
-(7, 'admin.description', 'Admin Description', 'Welcome to Voyager. The Missing Admin for Laravel', '', 'text', 2, 'Admin'),
+(6, 'admin.title', 'Admin Title', 'Dorada Admin', '', 'text', 1, 'Admin'),
+(7, 'admin.description', 'Admin Description', 'Адміністративна панель DORADA. Created by Altair', '', 'text', 2, 'Admin'),
 (8, 'admin.loader', 'Admin Loader', '', '', 'image', 3, 'Admin'),
 (9, 'admin.icon_image', 'Admin Icon Image', '', '', 'image', 4, 'Admin'),
-(10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', NULL, '', 'text', 1, 'Admin');
+(10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', NULL, '', 'text', 1, 'Admin'),
+(11, 'contacts.mobile-phone', 'Mobile phone', '+380989279554, +380989279554', NULL, 'text', 6, 'Contacts'),
+(12, 'contacts.email', 'Email', 'doradaukraine@gmail.com', NULL, 'text', 7, 'Contacts'),
+(13, 'site.title-en', 'Site Title EN', 'Dorada', NULL, 'text', 2, 'Site');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблиці `social_networks`
+--
+
+CREATE TABLE `social_networks` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `svg` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `link` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп даних таблиці `social_networks`
+--
+
+INSERT INTO `social_networks` (`id`, `name`, `svg`, `link`, `created_at`, `updated_at`) VALUES
+(1, 'Telegram', '[{\"download_link\":\"social-networks\\\\March2020\\\\569I8NbKLsscu7lReXxI.svg\",\"original_name\":\"telegram.svg\"}]', 'Telegram', '2020-03-19 19:40:48', '2020-03-19 19:40:48');
 
 -- --------------------------------------------------------
 
@@ -586,7 +868,99 @@ INSERT INTO `translations` (`id`, `table_name`, `column_name`, `foreign_key`, `l
 (27, 'menu_items', 'title', 5, 'pt', 'Ferramentas', '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
 (28, 'menu_items', 'title', 6, 'pt', 'Menus', '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
 (29, 'menu_items', 'title', 7, 'pt', 'Base de dados', '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
-(30, 'menu_items', 'title', 10, 'pt', 'Configurações', '2020-03-10 17:24:27', '2020-03-10 17:24:27');
+(30, 'menu_items', 'title', 10, 'pt', 'Configurações', '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
+(31, 'data_rows', 'display_name', 108, 'en', 'Id', '2020-03-15 19:07:45', '2020-03-15 19:07:45'),
+(32, 'data_rows', 'display_name', 109, 'en', 'Назва', '2020-03-15 19:07:45', '2020-03-15 19:07:45'),
+(33, 'data_rows', 'display_name', 110, 'en', 'Slug', '2020-03-15 19:07:45', '2020-03-15 19:07:45'),
+(34, 'data_rows', 'display_name', 111, 'en', 'Type Id', '2020-03-15 19:07:45', '2020-03-15 19:07:45'),
+(35, 'data_rows', 'display_name', 112, 'en', 'Заголовок', '2020-03-15 19:07:45', '2020-03-15 19:07:45'),
+(36, 'data_rows', 'display_name', 113, 'en', 'Підзаголовок', '2020-03-15 19:07:45', '2020-03-15 19:07:45'),
+(37, 'data_rows', 'display_name', 114, 'en', 'Текст', '2020-03-15 19:07:45', '2020-03-15 19:07:45'),
+(38, 'data_rows', 'display_name', 115, 'en', 'Заголовок кнопки', '2020-03-15 19:07:45', '2020-03-15 19:07:45'),
+(39, 'data_rows', 'display_name', 116, 'en', 'Посилання кнопки', '2020-03-15 19:07:45', '2020-03-15 19:07:45'),
+(40, 'data_rows', 'display_name', 117, 'en', 'Картинка', '2020-03-15 19:07:45', '2020-03-15 19:07:45'),
+(41, 'data_rows', 'display_name', 118, 'en', 'Created At', '2020-03-15 19:07:45', '2020-03-15 19:07:45'),
+(42, 'data_rows', 'display_name', 119, 'en', 'Updated At', '2020-03-15 19:07:45', '2020-03-15 19:07:45'),
+(43, 'data_rows', 'display_name', 120, 'en', 'infoblock_types', '2020-03-15 19:07:45', '2020-03-15 19:07:45'),
+(44, 'data_types', 'display_name_singular', 11, 'en', 'Інфоблок', '2020-03-15 19:07:45', '2020-03-15 19:07:45'),
+(45, 'data_types', 'display_name_plural', 11, 'en', 'Інфоблоки', '2020-03-15 19:07:45', '2020-03-15 19:07:45'),
+(46, 'data_rows', 'display_name', 121, 'en', 'infoblock_items', '2020-03-15 19:10:15', '2020-03-15 19:10:15'),
+(47, 'data_rows', 'display_name', 122, 'en', 'Id', '2020-03-15 19:18:18', '2020-03-15 19:18:18'),
+(48, 'data_rows', 'display_name', 123, 'en', 'Infoblock Id', '2020-03-15 19:18:18', '2020-03-15 19:18:18'),
+(49, 'data_rows', 'display_name', 124, 'en', 'Parent Id', '2020-03-15 19:18:18', '2020-03-15 19:18:18'),
+(50, 'data_rows', 'display_name', 125, 'en', 'Заголовок', '2020-03-15 19:18:18', '2020-03-15 19:18:18'),
+(51, 'data_rows', 'display_name', 126, 'en', 'Підзаголовок', '2020-03-15 19:18:18', '2020-03-15 19:18:18'),
+(52, 'data_rows', 'display_name', 127, 'en', 'Картинка', '2020-03-15 19:18:18', '2020-03-15 19:18:18'),
+(53, 'data_rows', 'display_name', 128, 'en', 'Заголовок кнопки', '2020-03-15 19:18:18', '2020-03-15 19:18:18'),
+(54, 'data_rows', 'display_name', 129, 'en', 'Посилання кнопки', '2020-03-15 19:18:18', '2020-03-15 19:18:18'),
+(55, 'data_rows', 'display_name', 130, 'en', 'Інформація', '2020-03-15 19:18:18', '2020-03-15 19:18:18'),
+(56, 'data_rows', 'display_name', 131, 'en', 'Порядковий номер', '2020-03-15 19:18:18', '2020-03-15 19:18:18'),
+(57, 'data_rows', 'display_name', 132, 'en', 'Created At', '2020-03-15 19:18:18', '2020-03-15 19:18:18'),
+(58, 'data_rows', 'display_name', 133, 'en', 'Updated At', '2020-03-15 19:18:18', '2020-03-15 19:18:18'),
+(59, 'data_rows', 'display_name', 134, 'en', 'infoblocks', '2020-03-15 19:18:18', '2020-03-15 19:18:18'),
+(60, 'data_rows', 'display_name', 135, 'en', 'infoblock_items', '2020-03-15 19:18:18', '2020-03-15 19:18:18'),
+(61, 'data_types', 'display_name_singular', 12, 'en', 'Елемент інфоблоку', '2020-03-15 19:18:18', '2020-03-15 19:18:18'),
+(62, 'data_types', 'display_name_plural', 12, 'en', 'Елементи інфоблоків', '2020-03-15 19:18:18', '2020-03-15 19:18:18'),
+(63, 'data_rows', 'display_name', 100, 'en', 'Id', '2020-03-15 19:25:52', '2020-03-15 19:25:52'),
+(64, 'data_rows', 'display_name', 101, 'en', 'Назва', '2020-03-15 19:25:52', '2020-03-15 19:25:52'),
+(65, 'data_rows', 'display_name', 102, 'en', 'Шлях до файлу', '2020-03-15 19:25:52', '2020-03-15 19:25:52'),
+(66, 'data_rows', 'display_name', 103, 'en', 'Public', '2020-03-15 19:25:52', '2020-03-15 19:25:52'),
+(67, 'data_rows', 'display_name', 104, 'en', 'With Items', '2020-03-15 19:25:52', '2020-03-15 19:25:52'),
+(68, 'data_rows', 'display_name', 105, 'en', 'With Item Parent', '2020-03-15 19:25:52', '2020-03-15 19:25:52'),
+(69, 'data_rows', 'display_name', 106, 'en', 'Created At', '2020-03-15 19:25:52', '2020-03-15 19:25:52'),
+(70, 'data_rows', 'display_name', 107, 'en', 'Updated At', '2020-03-15 19:25:52', '2020-03-15 19:25:52'),
+(71, 'data_types', 'display_name_singular', 10, 'en', 'Тип інфоблоків', '2020-03-15 19:25:52', '2020-03-15 19:25:52'),
+(72, 'data_types', 'display_name_plural', 10, 'en', 'Типи інфоблоків', '2020-03-15 19:25:52', '2020-03-15 19:25:52'),
+(73, 'menu_items', 'title', 19, 'en', 'Типи інфоблоків', '2020-03-15 19:28:44', '2020-03-15 19:28:44'),
+(74, 'menu_items', 'title', 20, 'en', 'Інфоблоки', '2020-03-15 19:28:54', '2020-03-15 19:28:54'),
+(75, 'menu_items', 'title', 21, 'en', 'Елементи інфоблоків', '2020-03-15 19:29:03', '2020-03-15 19:29:03'),
+(76, 'menu_items', 'title', 1, 'en', 'Dashboard', '2020-03-15 19:29:38', '2020-03-15 19:29:38'),
+(77, 'menu_items', 'title', 4, 'en', 'Roles', '2020-03-15 19:29:50', '2020-03-15 19:29:50'),
+(78, 'menu_items', 'title', 5, 'en', 'Tools', '2020-03-15 19:30:05', '2020-03-15 19:30:05'),
+(79, 'menu_items', 'title', 6, 'en', 'Menu Builder', '2020-03-15 19:30:14', '2020-03-15 19:30:14'),
+(80, 'menu_items', 'title', 7, 'en', 'Database', '2020-03-15 19:30:26', '2020-03-15 19:30:26'),
+(81, 'menu_items', 'title', 10, 'en', 'Settings', '2020-03-15 19:30:37', '2020-03-15 19:30:37'),
+(82, 'menu_items', 'title', 12, 'en', 'Categories', '2020-03-15 19:30:49', '2020-03-15 19:30:49'),
+(83, 'menu_items', 'title', 13, 'en', 'Posts', '2020-03-15 19:40:16', '2020-03-15 19:40:16'),
+(84, 'menu_items', 'title', 23, 'en', 'Posts', '2020-03-15 19:40:49', '2020-03-15 19:40:49'),
+(85, 'menu_items', 'title', 14, 'en', 'Pages', '2020-03-15 19:41:23', '2020-03-15 19:41:23'),
+(86, 'menu_items', 'title', 3, 'en', 'Users', '2020-03-16 18:01:27', '2020-03-16 18:01:27'),
+(87, 'menu_items', 'title', 24, 'en', 'Users', '2020-03-16 18:01:52', '2020-03-16 18:01:52'),
+(88, 'menu_items', 'title', 2, 'en', 'Media', '2020-03-16 18:02:14', '2020-03-16 18:02:14'),
+(89, 'menu_items', 'title', 36, 'en', 'Demonstrations', '2020-03-16 19:05:14', '2020-03-16 19:15:47'),
+(90, 'menu_items', 'title', 35, 'en', 'Education', '2020-03-16 19:05:29', '2020-03-16 19:05:29'),
+(91, 'menu_items', 'title', 34, 'en', 'Consulting', '2020-03-16 19:15:32', '2020-03-16 19:15:32'),
+(92, 'pages', 'title', 1, 'en', 'Hello World', '2020-03-18 16:44:17', '2020-03-18 16:44:17'),
+(93, 'pages', 'body', 1, 'en', '<p>Hello World. Scallywag grog swab Cat o\'nine tails scuttle rigging hardtack cable nipper Yellow Jack. Handsomely spirits knave lad killick landlubber or just lubber deadlights chantey pinnace crack Jennys tea cup. Provost long clothes black spot Yellow Jack bilged on her anchor league lateen sail case shot lee tackle.</p>\n<p>Ballast spirits fluke topmast me quarterdeck schooner landlubber or just lubber gabion belaying pin. Pinnace stern galleon starboard warp carouser to go on account dance the hempen jig jolly boat measured fer yer chains. Man-of-war fire in the hole nipperkin handsomely doubloon barkadeer Brethren of the Coast gibbet driver squiffy.</p>', '2020-03-18 16:44:17', '2020-03-18 16:44:17'),
+(94, 'pages', 'slug', 1, 'en', 'hello-world', '2020-03-18 16:44:17', '2020-03-18 16:44:17'),
+(95, 'data_rows', 'display_name', 142, 'en', 'Id', '2020-03-19 19:31:20', '2020-03-19 19:31:20'),
+(96, 'data_rows', 'display_name', 143, 'en', 'Назва', '2020-03-19 19:31:20', '2020-03-19 19:31:20'),
+(97, 'data_rows', 'display_name', 144, 'en', 'Slug', '2020-03-19 19:31:20', '2020-03-19 19:31:20'),
+(98, 'data_rows', 'display_name', 145, 'en', 'Заголовок', '2020-03-19 19:31:20', '2020-03-19 19:31:20'),
+(99, 'data_rows', 'display_name', 146, 'en', 'Підзаголовок', '2020-03-19 19:31:20', '2020-03-19 19:31:20'),
+(100, 'data_rows', 'display_name', 147, 'en', 'Created At', '2020-03-19 19:31:20', '2020-03-19 19:31:20'),
+(101, 'data_rows', 'display_name', 148, 'en', 'Updated At', '2020-03-19 19:31:20', '2020-03-19 19:31:20'),
+(102, 'data_rows', 'display_name', 149, 'en', 'gallery_images', '2020-03-19 19:31:20', '2020-03-19 19:31:20'),
+(103, 'data_types', 'display_name_singular', 14, 'en', 'Галерея', '2020-03-19 19:31:20', '2020-03-19 19:31:20'),
+(104, 'data_types', 'display_name_plural', 14, 'en', 'Галереї', '2020-03-19 19:31:20', '2020-03-19 19:31:20'),
+(105, 'data_rows', 'display_name', 150, 'en', 'Id', '2020-03-19 19:36:07', '2020-03-19 19:36:07'),
+(106, 'data_rows', 'display_name', 151, 'en', 'Gallery Id', '2020-03-19 19:36:07', '2020-03-19 19:36:07'),
+(107, 'data_rows', 'display_name', 152, 'en', 'Фото', '2020-03-19 19:36:07', '2020-03-19 19:36:07'),
+(108, 'data_rows', 'display_name', 153, 'en', 'Заголовок', '2020-03-19 19:36:07', '2020-03-19 19:36:07'),
+(109, 'data_rows', 'display_name', 154, 'en', 'Порядковий номер', '2020-03-19 19:36:07', '2020-03-19 19:36:07'),
+(110, 'data_rows', 'display_name', 155, 'en', 'Created At', '2020-03-19 19:36:07', '2020-03-19 19:36:07'),
+(111, 'data_rows', 'display_name', 156, 'en', 'Updated At', '2020-03-19 19:36:07', '2020-03-19 19:36:07'),
+(112, 'data_rows', 'display_name', 157, 'en', 'galleries', '2020-03-19 19:36:07', '2020-03-19 19:36:07'),
+(113, 'data_types', 'display_name_singular', 15, 'en', 'Фото галереї', '2020-03-19 19:36:07', '2020-03-19 19:36:07'),
+(114, 'data_types', 'display_name_plural', 15, 'en', 'Фото галереї', '2020-03-19 19:36:07', '2020-03-19 19:36:07'),
+(115, 'menu_items', 'title', 33, 'en', 'Services', '2020-03-19 19:45:04', '2020-03-19 19:45:04'),
+(116, 'menu_items', 'title', 32, 'en', 'Doradnitstvo', '2020-03-19 19:45:58', '2020-03-19 19:45:58'),
+(117, 'menu_items', 'title', 26, 'en', 'About association', '2020-03-19 19:48:22', '2020-03-19 19:48:22'),
+(118, 'menu_items', 'title', 27, 'en', 'General information', '2020-03-19 19:48:40', '2020-03-19 19:48:40'),
+(119, 'menu_items', 'title', 28, 'en', 'Our team', '2020-03-19 19:48:59', '2020-03-19 19:48:59'),
+(120, 'menu_items', 'title', 29, 'en', 'Registration documents', '2020-03-19 19:49:14', '2020-03-19 19:49:14'),
+(121, 'menu_items', 'title', 30, 'en', 'Our activity', '2020-03-19 19:49:35', '2020-03-19 19:49:35'),
+(122, 'menu_items', 'title', 31, 'en', 'Services in the regions', '2020-03-19 19:50:29', '2020-03-19 19:50:29');
 
 -- --------------------------------------------------------
 
@@ -660,6 +1034,41 @@ ALTER TABLE `failed_jobs`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Індекси таблиці `galleries`
+--
+ALTER TABLE `galleries`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `galleries_slug_unique` (`slug`);
+
+--
+-- Індекси таблиці `gallery_images`
+--
+ALTER TABLE `gallery_images`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `gallery_images_gallery_id_foreign` (`gallery_id`);
+
+--
+-- Індекси таблиці `infoblocks`
+--
+ALTER TABLE `infoblocks`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `infoblocks_slug_unique` (`slug`),
+  ADD KEY `infoblocks_type_id_foreign` (`type_id`);
+
+--
+-- Індекси таблиці `infoblock_items`
+--
+ALTER TABLE `infoblock_items`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `infoblock_items_infoblock_id_foreign` (`infoblock_id`);
+
+--
+-- Індекси таблиці `infoblock_types`
+--
+ALTER TABLE `infoblock_types`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Індекси таблиці `menus`
 --
 ALTER TABLE `menus`
@@ -729,6 +1138,12 @@ ALTER TABLE `settings`
   ADD UNIQUE KEY `settings_key_unique` (`key`);
 
 --
+-- Індекси таблиці `social_networks`
+--
+ALTER TABLE `social_networks`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Індекси таблиці `translations`
 --
 ALTER TABLE `translations`
@@ -765,13 +1180,13 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT для таблиці `data_rows`
 --
 ALTER TABLE `data_rows`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
 
 --
 -- AUTO_INCREMENT для таблиці `data_types`
 --
 ALTER TABLE `data_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT для таблиці `failed_jobs`
@@ -780,22 +1195,52 @@ ALTER TABLE `failed_jobs`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT для таблиці `galleries`
+--
+ALTER TABLE `galleries`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблиці `gallery_images`
+--
+ALTER TABLE `gallery_images`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблиці `infoblocks`
+--
+ALTER TABLE `infoblocks`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT для таблиці `infoblock_items`
+--
+ALTER TABLE `infoblock_items`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблиці `infoblock_types`
+--
+ALTER TABLE `infoblock_types`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT для таблиці `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблиці `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT для таблиці `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT для таблиці `pages`
@@ -807,7 +1252,7 @@ ALTER TABLE `pages`
 -- AUTO_INCREMENT для таблиці `permissions`
 --
 ALTER TABLE `permissions`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=72;
 
 --
 -- AUTO_INCREMENT для таблиці `posts`
@@ -825,13 +1270,19 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT для таблиці `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
+-- AUTO_INCREMENT для таблиці `social_networks`
+--
+ALTER TABLE `social_networks`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблиці `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
 
 --
 -- AUTO_INCREMENT для таблиці `users`
@@ -854,6 +1305,24 @@ ALTER TABLE `categories`
 --
 ALTER TABLE `data_rows`
   ADD CONSTRAINT `data_rows_data_type_id_foreign` FOREIGN KEY (`data_type_id`) REFERENCES `data_types` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Обмеження зовнішнього ключа таблиці `gallery_images`
+--
+ALTER TABLE `gallery_images`
+  ADD CONSTRAINT `gallery_images_gallery_id_foreign` FOREIGN KEY (`gallery_id`) REFERENCES `galleries` (`id`) ON DELETE CASCADE;
+
+--
+-- Обмеження зовнішнього ключа таблиці `infoblocks`
+--
+ALTER TABLE `infoblocks`
+  ADD CONSTRAINT `infoblocks_type_id_foreign` FOREIGN KEY (`type_id`) REFERENCES `infoblock_types` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+
+--
+-- Обмеження зовнішнього ключа таблиці `infoblock_items`
+--
+ALTER TABLE `infoblock_items`
+  ADD CONSTRAINT `infoblock_items_infoblock_id_foreign` FOREIGN KEY (`infoblock_id`) REFERENCES `infoblocks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Обмеження зовнішнього ключа таблиці `menu_items`
