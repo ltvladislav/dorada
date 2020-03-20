@@ -31,6 +31,8 @@
 
     @include('posts.preview')
 
+    @include('infoblock.additional-block')
+
 
 @stop
 
