@@ -15,3 +15,9 @@
         @include('posts.includes.card-collection', ['posts' => App\Models\Posts\Post::getPostsForMainPage()])
     </div>
 </div>
+
+
+
+
+
+
