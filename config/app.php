@@ -231,6 +231,8 @@ return [
 
         'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
         'Shortcode' => Webwizo\Shortcodes\Facades\Shortcode::class,
+
+        'Setting' => App\Models\Setting::class,
     ],
 
 ];

@@ -1,13 +1,7 @@
 @extends('layouts.app')
 
-@php
-    $title = setting('site.title-' . LaravelLocalization::getCurrentLocale());
-    if (empty($title)) {
-        $title = setting('site.title');
-    }
-@endphp
 
-@section('title', $title)
+@section('title', Setting::getLocalized('site.title'))
 
 @section('description', '')
 @section('body_class', 'home-page')
