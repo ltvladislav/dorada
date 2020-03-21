@@ -19,20 +19,19 @@
 
 @section('content')
 
-    @include('slider.main-slider')
+    [infoblock code="slajder-golovna"]
 
-    @include('infoblock.about')
+    [infoblock code="opis-golovna"]
 
     @include('infoblock.services')
 
-    @include('infoblock.partners')
+    [infoblock code="nashi-partneri-golovna"]
 
-    @include('infoblock.services2')
+    [infoblock code="servisi-golovna"]
 
     @include('posts.preview')
 
-    @include('infoblock.additional-block')
-
+    [infoblock code="korisni-posilannya-golovna"]
 
 @stop
 

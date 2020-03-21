@@ -203,7 +203,7 @@
              */
             $('.item_actions').on('click', '.delete', function (e) {
                 id = $(e.currentTarget).data('id');
-                $('#delete_form')[0].action = '{{ route('voyager.' . $dataType->slug . '.item.destroy', ['master' => $master->id, 'id' => '']) }}/' + id;
+                $('#delete_form')[0].action = '{{ route('voyager.' . $dataType->slug . '.item.destroy', ['master' => $master->id, 'id' => '__id']) }}'.replace('__id', id);
                 $('#delete_modal').modal('show');
             });
 
