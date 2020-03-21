@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Час створення: Бер 20 2020 р., 21:24
+-- Час створення: Бер 21 2020 р., 12:53
 -- Версія сервера: 10.3.13-MariaDB
 -- Версія PHP: 7.3.2
 
@@ -43,8 +43,7 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `parent_id`, `order`, `name`, `slug`, `created_at`, `updated_at`) VALUES
-(1, NULL, 1, 'Category 1', 'category-1', '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
-(2, NULL, 1, 'Category 2', 'category-2', '2020-03-10 17:24:27', '2020-03-10 17:24:27');
+(1, NULL, 1, 'Category 1', 'category-1', '2020-03-10 17:24:27', '2020-03-10 17:24:27');
 
 -- --------------------------------------------------------
 
@@ -735,7 +734,10 @@ INSERT INTO `posts` (`id`, `author_id`, `category_id`, `title`, `seo_title`, `ex
 (1, 0, NULL, 'Lorem Ipsum Post', NULL, 'This is the excerpt for the Lorem Ipsum Post', '<p>This is the body of the lorem ipsum post</p>', 'posts/post1.jpg', 'lorem-ipsum-post', 'This is the meta description', 'keyword1, keyword2, keyword3', 'PUBLISHED', 0, '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
 (2, 0, NULL, 'My Sample Post', NULL, 'This is the excerpt for the sample Post', '<p>This is the body for the sample post, which includes the body.</p>\r\n                <h2>We can use all kinds of format!</h2>\r\n                <p>And include a bunch of other stuff.</p>', 'posts/post2.jpg', 'my-sample-post', 'Meta Description for sample post', 'keyword1, keyword2, keyword3', 'PUBLISHED', 0, '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
 (3, 0, NULL, 'Latest Post', NULL, 'This is the excerpt for the latest post', '<p>This is the body for the latest post</p>', 'posts/post3.jpg', 'latest-post', 'This is the meta description', 'keyword1, keyword2, keyword3', 'PUBLISHED', 0, '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
-(4, 0, NULL, 'Yarr Post', NULL, 'Reef sails nipperkin bring a spring upon her cable coffer jury mast spike marooned Pieces of Eight poop deck pillage. Clipper driver coxswain galleon hempen halter come about pressgang gangplank boatswain swing the lead. Nipperkin yard skysail swab lanyard Blimey bilge water ho quarter Buccaneer.', '<p>Swab deadlights Buccaneer fire ship square-rigged dance the hempen jig weigh anchor cackle fruit grog furl. Crack Jennys tea cup chase guns pressgang hearties spirits hogshead Gold Road six pounders fathom measured fer yer chains. Main sheet provost come about trysail barkadeer crimp scuttle mizzenmast brig plunder.</p>\r\n<p>Mizzen league keelhaul galleon tender cog chase Barbary Coast doubloon crack Jennys tea cup. Blow the man down lugsail fire ship pinnace cackle fruit line warp Admiral of the Black strike colors doubloon. Tackle Jack Ketch come about crimp rum draft scuppers run a shot across the bow haul wind maroon.</p>\r\n<p>Interloper heave down list driver pressgang holystone scuppers tackle scallywag bilged on her anchor. Jack Tar interloper draught grapple mizzenmast hulk knave cable transom hogshead. Gaff pillage to go on account grog aft chase guns piracy yardarm knave clap of thunder.</p>', 'posts/post4.jpg', 'yarr-post', 'this be a meta descript', 'keyword1, keyword2, keyword3', 'PUBLISHED', 0, '2020-03-10 17:24:27', '2020-03-10 17:24:27');
+(4, 0, NULL, 'Yarr Post', NULL, 'Reef sails nipperkin bring a spring upon her cable coffer jury mast spike marooned Pieces of Eight poop deck pillage. Clipper driver coxswain galleon hempen halter come about pressgang gangplank boatswain swing the lead. Nipperkin yard skysail swab lanyard Blimey bilge water ho quarter Buccaneer.', '<p>Swab deadlights Buccaneer fire ship square-rigged dance the hempen jig weigh anchor cackle fruit grog furl. Crack Jennys tea cup chase guns pressgang hearties spirits hogshead Gold Road six pounders fathom measured fer yer chains. Main sheet provost come about trysail barkadeer crimp scuttle mizzenmast brig plunder.</p>\r\n<p>Mizzen league keelhaul galleon tender cog chase Barbary Coast doubloon crack Jennys tea cup. Blow the man down lugsail fire ship pinnace cackle fruit line warp Admiral of the Black strike colors doubloon. Tackle Jack Ketch come about crimp rum draft scuppers run a shot across the bow haul wind maroon.</p>\r\n<p>Interloper heave down list driver pressgang holystone scuppers tackle scallywag bilged on her anchor. Jack Tar interloper draught grapple mizzenmast hulk knave cable transom hogshead. Gaff pillage to go on account grog aft chase guns piracy yardarm knave clap of thunder.</p>', 'posts/post4.jpg', 'yarr-post', 'this be a meta descript', 'keyword1, keyword2, keyword3', 'PUBLISHED', 0, '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
+(5, 1, 1, 'РИНОК ЗЕМЛІ, ЯКИМ ВІН БУДЕ, ЯКЩО БУДЕ', '', 'Представлена модель ринкової рівноваги на потенційному ринку землі відповідає випадку, коли до участі допущено тільки діючі суб’єкти аграрного бізнесу, а право на продаж представлено без обмежень усім власникам паїв', '<p><span style=\"color: rgba(0, 4, 57, 0.75); font-family: -apple-system, LandRoverWeb, \'Segoe UI\', Roboto, \'Helvetica Neue\', Arial, \'Noto Sans\', sans-serif, \'Apple Color Emoji\', \'Segoe UI Emoji\', \'Segoe UI Symbol\', \'Noto Color Emoji\'; font-size: 12.8062px;\">Представлена модель ринкової рівноваги на потенційному ринку землі відповідає випадку, коли до участі допущено тільки діючі суб&rsquo;єкти аграрного бізнесу, а право на продаж представлено без обмежень усім власникам паїв</span></p>', 'posts\\March2020\\vb7L373j4nTB7tojsHPa.jpg', 'rinok-zemli-yakim-vin-bude-yaksho-bude', '', '', 'PUBLISHED', 1, '2020-03-20 17:33:10', '2020-03-20 17:33:10'),
+(6, 1, 1, 'З ПОЧАТКУ 2019/20 МР З УКРАЇНИ ЕКСПОРТОВАНО 29,4 МЛН ТОНН ЗЕРНА', '', 'Станом на 23 грудня з початку 2019/2020 маркетингового року з України експортовано 29 350 тис. тонн зернових культур, що на 7,6 млн тонн більше ніж за аналогічний період минулого маркетингового року.', '<p><span style=\"color: rgba(0, 4, 57, 0.75); font-family: -apple-system, LandRoverWeb, \'Segoe UI\', Roboto, \'Helvetica Neue\', Arial, \'Noto Sans\', sans-serif, \'Apple Color Emoji\', \'Segoe UI Emoji\', \'Segoe UI Symbol\', \'Noto Color Emoji\'; font-size: 12.8062px;\">Станом на 23 грудня з початку 2019/2020 маркетингового року з України експортовано 29 350 тис. тонн зернових культур, що на 7,6 млн тонн більше ніж за аналогічний період минулого маркетингового року.</span></p>', 'posts\\March2020\\7xKq9EBeyhoxgTRu5m07.jpg', 'z-pochatku-2019-20-mr-z-ukrayini-eksportovano-29-4-mln-tonn-zerna', '', '', 'PUBLISHED', 1, '2020-03-20 17:34:39', '2020-03-20 17:34:39'),
+(7, 1, 1, 'МІНЕКОНОМІКИ ПІДТРИМУЄ МОДЕРНІЗАЦІЮ ЗАКОНОДАВСТВА ПРО ПЕСТИЦИДИ ТА АГРОХІМІКАТАМИ', '', 'Прийняття проекту Закону забезпечить створення більш сучасного та належного регулювання відносин у сфері поводження з пестицидами та агрохімікатами.', '<p><span style=\"color: rgba(0, 4, 57, 0.75); font-family: -apple-system, LandRoverWeb, \'Segoe UI\', Roboto, \'Helvetica Neue\', Arial, \'Noto Sans\', sans-serif, \'Apple Color Emoji\', \'Segoe UI Emoji\', \'Segoe UI Symbol\', \'Noto Color Emoji\'; font-size: 12.8062px;\">Прийняття проекту Закону забезпечить створення більш сучасного та належного регулювання відносин у сфері поводження з пестицидами та агрохімікатами.</span></p>', 'posts\\March2020\\03utxjhNYemIQpWTfxnm.jpg', 'minekonomiki-pidtrimuye-modernizaciyu-zakonodavstva-pro-pesticidi-ta-agrohimikatami', '', '', 'PUBLISHED', 0, '2020-03-20 19:08:06', '2020-03-20 19:08:24');
 
 -- --------------------------------------------------------
 
@@ -793,7 +795,8 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', NULL, '', 'text', 1, 'Admin'),
 (11, 'contacts.mobile-phone', 'Mobile phone', '+380989279554, +380989279554', NULL, 'text', 6, 'Contacts'),
 (12, 'contacts.email', 'Email', 'doradaukraine@gmail.com', NULL, 'text', 7, 'Contacts'),
-(13, 'site.title-en', 'Site Title EN', 'Dorada', NULL, 'text', 2, 'Site');
+(13, 'site.title-en', 'Site Title EN', 'Dorada', NULL, 'text', 2, 'Site'),
+(14, 'posts.preview-title', 'Post preview title', 'Новини', NULL, 'text', 9, 'Posts');
 
 -- --------------------------------------------------------
 
@@ -960,7 +963,19 @@ INSERT INTO `translations` (`id`, `table_name`, `column_name`, `foreign_key`, `l
 (119, 'menu_items', 'title', 28, 'en', 'Our team', '2020-03-19 19:48:59', '2020-03-19 19:48:59'),
 (120, 'menu_items', 'title', 29, 'en', 'Registration documents', '2020-03-19 19:49:14', '2020-03-19 19:49:14'),
 (121, 'menu_items', 'title', 30, 'en', 'Our activity', '2020-03-19 19:49:35', '2020-03-19 19:49:35'),
-(122, 'menu_items', 'title', 31, 'en', 'Services in the regions', '2020-03-19 19:50:29', '2020-03-19 19:50:29');
+(122, 'menu_items', 'title', 31, 'en', 'Services in the regions', '2020-03-19 19:50:29', '2020-03-19 19:50:29'),
+(123, 'posts', 'title', 5, 'en', 'THE LAND MARKET WHAT IT WILL BE', '2020-03-20 17:33:10', '2020-03-20 17:33:10'),
+(124, 'posts', 'body', 5, 'en', '<p><span style=\"color: rgba(0, 4, 57, 0.749019607843137); font-family: -apple-system, LandRoverWeb, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;\"><span style=\"font-size: 12.8062px;\">The presented model of market equilibrium in the potential land market corresponds to the case when only active agricultural entities are allowed to participate and the right to sell is granted without restriction to all unit owners</span></span></p>', '2020-03-20 17:33:10', '2020-03-20 17:33:10'),
+(125, 'posts', 'slug', 5, 'en', 'the-land-market-what-it-will-be', '2020-03-20 17:33:10', '2020-03-20 17:33:10'),
+(126, 'posts', 'title', 6, 'en', '29.4 MILLION TONES OF Grain EXPORTED FROM UKRAINE IN YEAR 2019/20', '2020-03-20 17:34:39', '2020-03-20 17:34:39'),
+(127, 'posts', 'excerpt', 6, 'en', 'As of December 23, since the beginning of the 2019/2020 marketing year, 29 350 thousand tons of cereals have been exported from Ukraine, which is 7.6 million tons more than in the same period of the last marketing year.', '2020-03-20 17:34:39', '2020-03-20 17:34:39'),
+(128, 'posts', 'body', 6, 'en', '<p>As of December 23, since the beginning of the 2019/2020 marketing year, 29 350 thousand tons of cereals have been exported from Ukraine, which is 7.6 million tons more than in the same period of the last marketing year.</p>', '2020-03-20 17:34:39', '2020-03-20 17:34:39'),
+(129, 'posts', 'slug', 6, 'en', '29-4-million-tones-of-grain-exported-from-ukraine-in-year-2019-20', '2020-03-20 17:34:39', '2020-03-20 17:34:39'),
+(130, 'posts', 'excerpt', 5, 'en', 'The presented model of market equilibrium in the potential land market corresponds to the case when only active agricultural entities are allowed to participate and the right to sell is granted without restriction to all unit owners', '2020-03-20 17:35:21', '2020-03-20 17:35:21'),
+(131, 'posts', 'title', 7, 'en', 'Ministry of Economy Supports Pesticides and Agrochemicals Legislation Upgrades', '2020-03-20 19:08:06', '2020-03-20 19:08:06'),
+(132, 'posts', 'excerpt', 7, 'en', 'Adoption of the draft law will provide for a more modern and appropriate regulation of relations in the field of pesticide and agrochemical management.', '2020-03-20 19:08:06', '2020-03-20 19:08:06'),
+(133, 'posts', 'body', 7, 'en', '<p>Adoption of the draft law will provide for a more modern and appropriate regulation of relations in the field of pesticide and agrochemical management.</p>', '2020-03-20 19:08:06', '2020-03-20 19:08:06'),
+(134, 'posts', 'slug', 7, 'en', 'ministry-of-economy-supports-pesticides-and-agrochemicals-legislation-upgrades', '2020-03-20 19:08:06', '2020-03-20 19:08:06');
 
 -- --------------------------------------------------------
 
@@ -1258,7 +1273,7 @@ ALTER TABLE `permissions`
 -- AUTO_INCREMENT для таблиці `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблиці `roles`
@@ -1270,7 +1285,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT для таблиці `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT для таблиці `social_networks`
@@ -1282,7 +1297,7 @@ ALTER TABLE `social_networks`
 -- AUTO_INCREMENT для таблиці `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
 
 --
 -- AUTO_INCREMENT для таблиці `users`
