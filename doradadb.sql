@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Час створення: Бер 21 2020 р., 12:53
+-- Час створення: Бер 21 2020 р., 16:32
 -- Версія сервера: 10.3.13-MariaDB
 -- Версія PHP: 7.3.2
 
@@ -151,14 +151,14 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (121, 11, 'infoblock_hasmany_infoblock_item_relationship', 'relationship', 'Елементи', 0, 1, 1, 1, 1, 1, '{\"isItems\":true,\"dataTypeSlug\":\"infoblock-items\",\"itemsProperty\":\"items\",\"itemsVisibleMethod\":\"typeWithItems\",\"model\":\"App\\\\Models\\\\Infoblocks\\\\InfoblockItem\",\"table\":\"infoblock_items\",\"type\":\"hasMany\",\"column\":\"infoblock_id\",\"key\":\"id\",\"label\":\"title\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 14),
 (122, 12, 'id', 'number', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (123, 12, 'infoblock_id', 'select_dropdown', 'Infoblock Id', 1, 0, 1, 1, 1, 1, '{}', 2),
-(124, 12, 'parent_id', 'select_dropdown', 'Parent Id', 0, 0, 1, 1, 1, 1, '{}', 3),
+(124, 12, 'parent_id', 'select_dropdown', 'Parent Id', 0, 0, 1, 0, 1, 1, '{}', 3),
 (125, 12, 'title', 'text', 'Заголовок', 0, 1, 1, 1, 1, 0, '{}', 4),
 (126, 12, 'sub_title', 'text', 'Підзаголовок', 0, 0, 1, 1, 1, 0, '{}', 5),
 (127, 12, 'image', 'file', 'Картинка', 0, 1, 1, 1, 1, 1, '{}', 6),
 (128, 12, 'button_title', 'text', 'Заголовок кнопки', 0, 0, 1, 1, 1, 0, '{}', 7),
 (129, 12, 'button_link', 'text', 'Посилання кнопки', 0, 0, 1, 1, 1, 0, '{}', 8),
 (130, 12, 'body', 'text_area', 'Інформація', 0, 0, 1, 1, 1, 0, '{}', 9),
-(131, 12, 'order', 'number', 'Порядковий номер', 1, 1, 1, 1, 1, 1, '{}', 10),
+(131, 12, 'order', 'number', 'Порядковий номер', 1, 0, 0, 0, 0, 0, '{}', 10),
 (132, 12, 'created_at', 'timestamp', 'Created At', 0, 0, 1, 0, 0, 1, '{}', 11),
 (133, 12, 'updated_at', 'timestamp', 'Updated At', 0, 0, 1, 0, 0, 0, '{}', 12),
 (134, 12, 'infoblock_item_belongsto_infoblock_relationship', 'relationship', 'Інфоблок', 0, 1, 1, 1, 1, 1, '{\"isItemsParent\":true,\"parentDataTypeSlug\":\"infoblocks\",\"model\":\"App\\\\Models\\\\Infoblocks\\\\Infoblock\",\"table\":\"infoblocks\",\"type\":\"belongsTo\",\"column\":\"infoblock_id\",\"key\":\"id\",\"label\":\"name\",\"pivot_table\":\"categories\",\"pivot\":\"0\",\"taggable\":\"0\"}', 13),
@@ -223,7 +223,7 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, '', '', 1, 0, NULL, '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
 (10, 'infoblock_types', 'infoblock-types', 'Тип інфоблоків', 'Типи інфоблоків', 'voyager-categories', 'App\\Models\\Infoblocks\\InfoblockType', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-03-15 19:00:13', '2020-03-15 19:25:52'),
 (11, 'infoblocks', 'infoblocks', 'Інфоблок', 'Інфоблоки', 'voyager-photos', 'App\\Models\\Infoblocks\\Infoblock', NULL, 'App\\Http\\Controllers\\WithItemsBase\\BaseWithItemsController', NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-03-15 19:05:35', '2020-03-15 19:27:43'),
-(12, 'infoblock_items', 'infoblock-items', 'Елемент інфоблоку', 'Елементи інфоблоків', 'voyager-photo', 'App\\Models\\Infoblocks\\InfoblockItem', NULL, 'App\\Http\\Controllers\\WithItemsBase\\BaseItemController', NULL, 1, 0, '{\"order_column\":\"order\",\"order_display_column\":\"title\",\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-03-15 19:15:20', '2020-03-15 19:27:02'),
+(12, 'infoblock_items', 'infoblock-items', 'Елемент інфоблоку', 'Елементи інфоблоків', 'voyager-photo', 'App\\Models\\Infoblocks\\InfoblockItem', NULL, 'App\\Http\\Controllers\\WithItemsBase\\BaseItemController', NULL, 1, 0, '{\"order_column\":\"order\",\"order_display_column\":\"title\",\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-03-15 19:15:20', '2020-03-21 10:59:39'),
 (13, 'social_networks', 'social-networks', 'Соцільна мережа', 'Соціальні мережі', 'voyager-facebook', 'App\\Models\\SocialNetwork', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null}', '2020-03-16 18:39:44', '2020-03-16 18:39:44'),
 (14, 'galleries', 'galleries', 'Галерея', 'Галереї', 'voyager-photos', 'App\\Models\\Galleries\\Gallery', NULL, 'App\\Http\\Controllers\\WithItemsBase\\BaseWithItemsController', NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-03-19 19:29:21', '2020-03-19 19:31:19'),
 (15, 'gallery_images', 'gallery-images', 'Фото галереї', 'Фото галереї', 'voyager-photo', 'App\\Models\\Galleries\\GalleryImage', NULL, 'App\\Http\\Controllers\\WithItemsBase\\BaseItemController', NULL, 1, 0, '{\"order_column\":\"order\",\"order_display_column\":\"caption\",\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-03-19 19:34:03', '2020-03-19 19:36:06');
@@ -301,7 +301,11 @@ CREATE TABLE `infoblocks` (
 --
 
 INSERT INTO `infoblocks` (`id`, `name`, `slug`, `type_id`, `title`, `sub_title`, `body`, `button_title`, `button_link`, `image`, `created_at`, `updated_at`) VALUES
-(1, 'Опис (головна)', 'opis-golovna', 1, 'DORADA.ORG', '', '<p>Метою діяльності Асоціації є сприяння покращенню добробуту сільського населення та розвитку сільської місцевості через підвищення рівня знань і вдосконалення практичних навичок сільського населення та сільськогосподарських товаровиробників, задоволення та захист соціальних, економічних, фахових та інших спільних інтересів членів Асоціації.</p>', 'Дізнатись більше', '', NULL, '2020-03-15 19:52:26', '2020-03-15 19:52:26');
+(1, 'Опис (головна)', 'opis-golovna', 1, 'Про асоціацію', '', '<p>Метою діяльності Асоціації є сприяння покращенню добробуту сільського населення та розвитку сільської місцевості через підвищення рівня знань і вдосконалення практичних навичок сільського населення та сільськогосподарських товаровиробників, задоволення та захист соціальних, економічних, фахових та інших спільних інтересів членів Асоціації.</p>', 'Читати далі', NULL, NULL, '2020-03-15 19:52:26', '2020-03-21 09:11:21'),
+(2, 'Слайдер (головна)', 'slajder-golovna', 2, '', '', '', '', NULL, NULL, '2020-03-21 09:40:12', '2020-03-21 09:40:12'),
+(3, 'Сервіси (головна)', 'servisi-golovna', 3, '', '', '', '', NULL, NULL, '2020-03-21 10:19:00', '2020-03-21 10:19:00'),
+(4, 'Корисні посилання (головна)', 'korisni-posilannya-golovna', 4, 'Корисні посилання', '', '', '', NULL, NULL, '2020-03-21 10:56:55', '2020-03-21 10:56:55'),
+(5, 'Наші партнери (головна)', 'nashi-partneri-golovna', 5, 'Наші партнери', '', '', '', NULL, NULL, '2020-03-21 11:10:09', '2020-03-21 11:10:09');
 
 -- --------------------------------------------------------
 
@@ -323,6 +327,21 @@ CREATE TABLE `infoblock_items` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп даних таблиці `infoblock_items`
+--
+
+INSERT INTO `infoblock_items` (`id`, `infoblock_id`, `parent_id`, `title`, `sub_title`, `image`, `button_title`, `button_link`, `body`, `order`, `created_at`, `updated_at`) VALUES
+(1, 2, NULL, 'Сільськогосподарське дорадництво', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\1P1YJrUxhGP4bSLnwipR.jpg\",\"original_name\":\"slide1.jpg\"}]', '', NULL, 'Дорадча діяльність як фактор інформаційно-консультаційного забезпечення розвитку сільських територій', 1, '2020-03-21 09:48:46', '2020-03-21 10:02:02'),
+(2, 2, NULL, 'Дорадництво допоможе розвитку малого фермерства в Україні', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\4E7ChOwsmPt84ZtjJT1z.jpg\",\"original_name\":\"slide2.jpg\"}]', '', NULL, 'ФАО реалізує в Україні проект з надання підтримки для переходу до більш ефективної системи надання сільськогосподарських дорадчих послуг', 2, '2020-03-21 10:02:40', '2020-03-21 10:03:26'),
+(3, 3, NULL, 'Підтримка дорадчих служб', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\8n3XnZc5P91v6BayHnMG.svg\",\"original_name\":\"teh-support.svg\"}]', 'Детальніше', NULL, 'УКР Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et eveniet iste minima quasi quidem tenetur! Ad impedit neque nobis porro.', 3, '2020-03-21 10:19:33', '2020-03-21 10:40:58'),
+(4, 3, NULL, 'Навчання та самонавчання користувачів', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\gItQNa6KnIp8rYaW9Hzw.svg\",\"original_name\":\"student.svg\"}]', 'Детальніше', NULL, 'УКР Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et eveniet iste minima quasi quidem tenetur! Ad impedit neque nobis porro.', 4, '2020-03-21 10:21:31', '2020-03-21 10:41:15'),
+(5, 3, NULL, 'Електронне дорадницто', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\w0DKpV0PPa9R25yeNBBh.svg\",\"original_name\":\"book.svg\"}]', 'Перейти', NULL, 'УКР Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et eveniet iste minima quasi quidem tenetur! Ad impedit neque nobis porro.', 5, '2020-03-21 10:23:11', '2020-03-21 10:41:32'),
+(6, 4, NULL, 'FAQ', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\P5WlnAV9hhl0SlCxjFGB.svg\",\"original_name\":\"faq.svg\"}]', '', NULL, 'УКР Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi corporis deserunt dicta doloremque earum', 6, '2020-03-21 10:57:22', '2020-03-21 10:58:23'),
+(7, 4, NULL, 'FAQ 2', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\hEUN6GOvtbBuJKJJNAar.svg\",\"original_name\":\"faq.svg\"}]', '', NULL, 'УКР Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi corporis deserunt dicta doloremque earum', 7, '2020-03-21 10:58:38', '2020-03-21 10:59:10'),
+(8, 5, NULL, 'ННЦ \"Інститут аграрної економіки\"', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\Gry65VDjCL7BVBIQanLJ.jpg\",\"original_name\":\"partner1.jpg\"}]', '', 'http://iae.faaf.org.ua/', '', 8, '2020-03-21 11:10:36', '2020-03-21 11:14:46'),
+(9, 5, NULL, 'Журнал \"Землевпорядний вісник\"', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\FuwT1xMSsLiVmTgH6n1j.jpg\",\"original_name\":\"Visnik.jpg\"}]', '', 'http://zemvisnuk.com.ua/', '', 9, '2020-03-21 11:16:52', '2020-03-21 11:17:08');
 
 -- --------------------------------------------------------
 
@@ -346,7 +365,11 @@ CREATE TABLE `infoblock_types` (
 --
 
 INSERT INTO `infoblock_types` (`id`, `name`, `blade_path`, `public`, `with_items`, `with_item_parent`, `created_at`, `updated_at`) VALUES
-(1, 'About', 'about', 0, 0, 0, '2020-03-15 19:50:16', '2020-03-15 19:50:16');
+(1, 'About', 'about', 0, 0, 0, '2020-03-15 19:50:16', '2020-03-15 19:50:16'),
+(2, 'Слайдер (головний)', 'slider', 0, 1, 0, '2020-03-21 09:04:54', '2020-03-21 09:04:54'),
+(3, 'Сервіси (головна)', 'services', 0, 1, 0, '2020-03-21 09:05:54', '2020-03-21 09:05:54'),
+(4, 'Корисні посилання', 'useful-links', 0, 1, 0, '2020-03-21 10:56:12', '2020-03-21 10:56:12'),
+(5, 'Слайдер (партнери)', 'partners-slider', 0, 1, 0, '2020-03-21 11:08:25', '2020-03-21 11:08:25');
 
 -- --------------------------------------------------------
 
@@ -796,7 +819,8 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (11, 'contacts.mobile-phone', 'Mobile phone', '+380989279554, +380989279554', NULL, 'text', 6, 'Contacts'),
 (12, 'contacts.email', 'Email', 'doradaukraine@gmail.com', NULL, 'text', 7, 'Contacts'),
 (13, 'site.title-en', 'Site Title EN', 'Dorada', NULL, 'text', 2, 'Site'),
-(14, 'posts.preview-title', 'Post preview title', 'Новини', NULL, 'text', 9, 'Posts');
+(14, 'posts.preview-title', 'Post preview title', 'Новини', NULL, 'text', 9, 'Posts'),
+(16, 'posts.preview-title-en', 'Post preview title EN', 'News', NULL, 'text', 10, 'Posts');
 
 -- --------------------------------------------------------
 
@@ -975,7 +999,31 @@ INSERT INTO `translations` (`id`, `table_name`, `column_name`, `foreign_key`, `l
 (131, 'posts', 'title', 7, 'en', 'Ministry of Economy Supports Pesticides and Agrochemicals Legislation Upgrades', '2020-03-20 19:08:06', '2020-03-20 19:08:06'),
 (132, 'posts', 'excerpt', 7, 'en', 'Adoption of the draft law will provide for a more modern and appropriate regulation of relations in the field of pesticide and agrochemical management.', '2020-03-20 19:08:06', '2020-03-20 19:08:06'),
 (133, 'posts', 'body', 7, 'en', '<p>Adoption of the draft law will provide for a more modern and appropriate regulation of relations in the field of pesticide and agrochemical management.</p>', '2020-03-20 19:08:06', '2020-03-20 19:08:06'),
-(134, 'posts', 'slug', 7, 'en', 'ministry-of-economy-supports-pesticides-and-agrochemicals-legislation-upgrades', '2020-03-20 19:08:06', '2020-03-20 19:08:06');
+(134, 'posts', 'slug', 7, 'en', 'ministry-of-economy-supports-pesticides-and-agrochemicals-legislation-upgrades', '2020-03-20 19:08:06', '2020-03-20 19:08:06'),
+(135, 'infoblocks', 'title', 1, 'en', 'About the Association', '2020-03-21 09:09:54', '2020-03-21 09:09:54'),
+(136, 'infoblocks', 'body', 1, 'en', '<p>The purpose of the Association\'s activities is to promote the improvement of the well-being of the rural population and the development of the countryside by raising the level of knowledge and improving the practical skills of the rural population and agricultural producers, satisfying and protecting the social, economic, professional and other common interests of the Association\'s members.</p>', '2020-03-21 09:09:54', '2020-03-21 09:09:54'),
+(137, 'infoblocks', 'button_title', 1, 'en', 'Read more', '2020-03-21 09:09:54', '2020-03-21 09:09:54'),
+(138, 'infoblock_items', 'title', 1, 'en', 'Agricultural advisory services', '2020-03-21 09:59:47', '2020-03-21 09:59:47'),
+(139, 'infoblock_items', 'body', 1, 'en', 'Advisory activities as a factor in information and advisory support for rural development', '2020-03-21 09:59:47', '2020-03-21 09:59:47'),
+(140, 'infoblock_items', 'title', 2, 'en', 'The consultancy will help the development of small farming in Ukraine', '2020-03-21 10:02:40', '2020-03-21 10:02:40'),
+(141, 'infoblock_items', 'body', 2, 'en', 'FAO implements project in Ukraine to support transition to more efficient agricultural advisory service', '2020-03-21 10:03:26', '2020-03-21 10:03:26'),
+(142, 'infoblock_items', 'title', 3, 'en', 'Support advisory services', '2020-03-21 10:19:33', '2020-03-21 10:19:33'),
+(143, 'infoblock_items', 'body', 3, 'en', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et eveniet iste minima quasi quidem tenetur! Ad impedit neque nobis porro.', '2020-03-21 10:20:53', '2020-03-21 10:20:53'),
+(144, 'infoblock_items', 'title', 4, 'en', 'User education and training', '2020-03-21 10:21:31', '2020-03-21 10:21:31'),
+(145, 'infoblock_items', 'button_title', 4, 'en', 'Go', '2020-03-21 10:22:16', '2020-03-21 10:25:54'),
+(146, 'infoblock_items', 'body', 4, 'en', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et eveniet iste minima quasi quidem tenetur! Ad impedit neque nobis porro.', '2020-03-21 10:22:16', '2020-03-21 10:22:16'),
+(147, 'infoblock_items', 'button_title', 3, 'en', 'Go', '2020-03-21 10:22:38', '2020-03-21 10:25:44'),
+(148, 'infoblock_items', 'title', 5, 'en', 'Electronic advisory', '2020-03-21 10:23:11', '2020-03-21 10:23:11'),
+(149, 'infoblock_items', 'button_title', 5, 'en', 'Go', '2020-03-21 10:25:31', '2020-03-21 10:25:31'),
+(150, 'infoblock_items', 'body', 5, 'en', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et eveniet iste minima quasi quidem tenetur! Ad impedit neque nobis porro.', '2020-03-21 10:25:31', '2020-03-21 10:25:31'),
+(151, 'infoblocks', 'title', 4, 'en', 'Useful links', '2020-03-21 10:56:55', '2020-03-21 10:56:55'),
+(152, 'infoblock_items', 'title', 6, 'en', 'FAQ', '2020-03-21 10:57:22', '2020-03-21 10:57:22'),
+(153, 'infoblock_items', 'body', 6, 'en', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi corporis deserunt dicta doloremque earum', '2020-03-21 10:58:23', '2020-03-21 10:58:23'),
+(154, 'infoblock_items', 'title', 7, 'en', 'FAQ 2', '2020-03-21 10:58:38', '2020-03-21 10:58:38'),
+(155, 'infoblock_items', 'body', 7, 'en', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi corporis deserunt dicta doloremque earum', '2020-03-21 10:58:56', '2020-03-21 10:58:56'),
+(156, 'infoblocks', 'title', 5, 'en', 'Our partners', '2020-03-21 11:10:09', '2020-03-21 11:10:09'),
+(157, 'infoblock_items', 'title', 8, 'en', 'ННЦ \"Інститут аграрної економіки\"', '2020-03-21 11:14:46', '2020-03-21 11:14:46'),
+(158, 'infoblock_items', 'title', 9, 'en', 'Журнал \"Землевпорядний вісник\"', '2020-03-21 11:16:52', '2020-03-21 11:16:52');
 
 -- --------------------------------------------------------
 
@@ -1225,19 +1273,19 @@ ALTER TABLE `gallery_images`
 -- AUTO_INCREMENT для таблиці `infoblocks`
 --
 ALTER TABLE `infoblocks`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблиці `infoblock_items`
 --
 ALTER TABLE `infoblock_items`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT для таблиці `infoblock_types`
 --
 ALTER TABLE `infoblock_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблиці `menus`
@@ -1285,7 +1333,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT для таблиці `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT для таблиці `social_networks`
@@ -1297,7 +1345,7 @@ ALTER TABLE `social_networks`
 -- AUTO_INCREMENT для таблиці `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=135;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
 
 --
 -- AUTO_INCREMENT для таблиці `users`
