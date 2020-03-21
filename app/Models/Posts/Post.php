@@ -2,12 +2,17 @@
 
 namespace App\Models\Posts;
 
+use App\Traits\Imageable;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 use TCG\Voyager\Facades\Voyager;
 
 class Post extends \TCG\Voyager\Models\Post
 {
+    use Imageable;
+
+    protected $image_column = 'image';
+
     public function save(array $options = [])
     {
         parent::save();
@@ -33,7 +38,7 @@ class Post extends \TCG\Voyager\Models\Post
     }
 
     public static function getPostsForMainPage() {
-        $count = setting('posts.count-on-home-page');
+        $count = 3;
         $requiredPosts = Post::where('featured', '=', 1)->last($count)->published()->get();
 
         if ($requiredPosts->count() < $count) {
@@ -79,4 +84,19 @@ class Post extends \TCG\Voyager\Models\Post
         return static::where('category_id', $categoryId)->last()->skip($skip)->take($take)->get();
     }
 
+
+//    public static function findByLocalizedSlug($slug)
+//    {
+//        $post = static::where('slug', '=', $slug)->first();
+//        if (empty($post)) {
+//            $post = static::
+//            join('translations', 'posts.id', '=', 'translations.foreign_key')
+//                ->where('translations.table_name', '=', 'posts')
+//                ->where('translations.locale', '=', app()->getLocale())
+//                ->where('translations.column_name', '=', 'slug')
+//                ->where('translations.value', '=', $slug)
+//                ->first();
+//        }
+//        return $post;
+//    }
 }

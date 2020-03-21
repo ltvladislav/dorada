@@ -43,7 +43,7 @@ class PostController extends \TCG\Voyager\Http\Controllers\VoyagerBaseController
 
     public function publicShow($slug) {
         return view('posts.show', [
-            'post' => Post::where('slug', '=', $slug)->firstOrFail()
+            'post' => Post::whereSlug($slug)->firstOrFail()
         ]);
     }
     public function publicIndex() {
@@ -54,6 +54,7 @@ class PostController extends \TCG\Voyager\Http\Controllers\VoyagerBaseController
             'posts' => Post::last(static::PAGINATE_COUNT)->get()
         ]);
     }
+
 
     public function postService(Request $request) {
         if ($request["methodName"] == "getPostByCategory") {

@@ -29,7 +29,7 @@
 
     @include('infoblock.services2')
 
-    @include('includes.news-preview')
+    @include('posts.preview')
 
     @include('infoblock.additional-block')
 
