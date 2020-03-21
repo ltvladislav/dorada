@@ -5,17 +5,9 @@
 @section('content-title', 'Posts')
 
 @section('content')
-    <div style="background: url({{ Storage::disk(config('voyager.storage.disk'))->url(str_replace('\\', '/', setting('posts.page-header-image'))) }}) no-repeat center center / cover; background-attachment: fixed;" class="page-header">
-        <div class="page-header-overlay"></div>
-        <div class="page-header-content">
-            <h1>Новини</h1>
-        </div>
-    </div>
-
-
-
 
     <div class="container-main">
+        <h1>Новини</h1>
 
         <div class="news-category">
             <div class="category-list">
@@ -42,7 +34,7 @@
         <div class="news-wrapper" data-paginate="posts">
             @include('posts.includes.card-collection', ['posts' => $posts])
         </div>
-        @include('includes.pagination')
+{{--        @include('includes.pagination')--}}
     </div>
 
 @endsection
