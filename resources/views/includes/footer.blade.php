@@ -11,14 +11,18 @@
            <div class="footer-contacts">
                <p class="footer-heading">Контакти:</p>
                <div class="footer-contact-list">
-                   <a type="mail" href="mailto:mail">
-                       <img src="{{ asset('/image/mail.svg') }}" alt="">
-                       <span>test#nfjdkef.co</span>
-                   </a>
-                   <a type="phone" href="tel^tel">
-                       <img src="{{ asset('/image/phone.svg') }}" alt="">
-                       <span>+4354 345 345 34 5</span>
-                   </a>
+                   @foreach(explode(',', setting('contacts.email')) as $email)
+                       <a type="mail" href="mailto:{{ $email }}">
+                           <img src="{{ asset('/image/mail.svg') }}" alt="">
+                           <span>{{ $email }}</span>
+                       </a>
+                   @endforeach
+                   @foreach(explode(',', setting('contacts.mobile-phone')) as $phone)
+                       <a type="phone" href="tel^{{ $phone }}">
+                           <img src="{{ asset('/image/phone.svg') }}" alt="">
+                           <span>{{ $phone }}</span>
+                       </a>
+                   @endforeach
 
                </div>
            </div>
@@ -26,12 +30,11 @@
            <div class="footer-contacts">
                <p class="footer-heading">Соціальні мережі:</p>
                <div class="footer-socials-list">
-                   <a href="#">
-                       <img src="{{ asset('/image/telegram.svg') }}" alt="">
-                   </a>
-                   <a href="#">
-                       <img src="{{ asset('/image/telegram.svg') }}" alt="">
-                   </a>
+                   @foreach(App\Models\SocialNetwork::all() as $network)
+                       <a href="{{ $network->link }}" target="_blank">
+                           <img src="{{ $network->getImage(true) }}" alt="">
+                       </a>
+                   @endforeach
                </div>
            </div>
 
