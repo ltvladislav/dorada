@@ -41,14 +41,6 @@
        <div class="footer-right">
            <div class="footer-menu-item">
                <a href="#" class="footer-menu-title">Про асоціацію</a>
-
-               <a href="#">Загальна інформація</a>
-               <a href="#">Наша команда</a>
-               <a href="#">Наша діяльність</a>
-           </div>
-
-           <div class="footer-menu-item">
-               <a href="#" class="footer-menu-title">Про асоціацію</a>
                <a href="#">Загальна інформація</a>
                <a href="#">Наша діяльність</a>
            </div>
