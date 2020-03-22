@@ -25,11 +25,6 @@
                     </a>
                 @endforeach
             </div>
-
-            <div class="shown">
-
-
-            </div>
         </div>
 
         <div class="news-wrapper" data-paginate="posts">
