@@ -15,6 +15,6 @@
         <a href="{{ route('post', $post->slug) }}" class="new-name">{{ $post->getTranslatedAttribute('title') }}</a>
 
         <p class="new-description">{!! $post->getTranslatedAttribute('excerpt') !!}</p>
-        <a href="{{ route('post', $post->slug) }}" class="more">Детальніше</a>
+        <a href="{{ route('post', $post->slug) }}" class="more">@lang('main.details')</a>
     </div>
 </div>

@@ -9,7 +9,7 @@
 
        <div class="footer-left">
            <div class="footer-contacts">
-               <p class="footer-heading">Контакти:</p>
+               <p class="footer-heading">@lang('main.contacts'):</p>
                <div class="footer-contact-list">
                    @foreach(explode(',', setting('contacts.email')) as $email)
                        <a type="mail" href="mailto:{{ $email }}">
@@ -28,7 +28,7 @@
            </div>
 
            <div class="footer-contacts">
-               <p class="footer-heading">Соціальні мережі:</p>
+               <p class="footer-heading">@lang('main.socials'):</p>
                <div class="footer-socials-list">
                    @foreach(App\Models\SocialNetwork::all() as $network)
                        <a href="{{ $network->link }}" target="_blank">
@@ -42,36 +42,11 @@
        </div>
 
        <div class="footer-right">
-           <div class="footer-menu-item">
-               <a href="#" class="footer-menu-title">Про асоціацію</a>
-               <a href="#">Загальна інформація</a>
-               <a href="#">Наша діяльність</a>
-           </div>
-            <div class="footer-menu-item">
-                <a href="#" class="footer-menu-title">Про асоціацію</a>
-
-                <a href="#">Загальна інформація</a>
-                <a href="#">Наша команда</a>
-                <a href="#">Наша діяльність</a>
-            </div>
-
-           <div class="footer-menu-item">
-               <a href="#" class="footer-menu-title">Про асоціацію</a>
-               <a href="#">Загальна інформація</a>
-               <a href="#">Наша діяльність</a>
-           </div>
-           <div class="footer-menu-item">
-               <a href="#" class="footer-menu-title">Дорадництво</a>
-               <a href="#">Загальна інформація</a>
-               <a href="#">Наша діяльність</a>
-               <a href="#">Загальна інформація</a>
-               <a href="#">Наша діяльність</a>
-           </div>
-
+           {{ menu('footer-navigation', 'menus/footer-navigation') }}
        </div>
    </div>
     <div class="copyright">
-        <p>2020 Dorada ©</p>
+        <p>{{ date('Y') }} Dorada ©</p>
         <p>created by Zirael</p>
     </div>
 
