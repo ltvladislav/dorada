@@ -34,7 +34,7 @@
         <div class="news-wrapper" data-paginate="posts">
             @include('posts.includes.card-collection', ['posts' => $posts])
         </div>
-{{--        @include('includes.pagination')--}}
+        @include('includes.pagination')
     </div>
 
 @endsection
