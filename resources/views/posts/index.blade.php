@@ -1,32 +1,33 @@
 @extends('layouts.app')
 
-@section('title', 'Posts')
+@section('title', Setting::getLocalized('posts.title'))
 
 @section('content-title', 'Posts')
 
 @section('content')
 
     <div class="container-main">
-        <h1>Новини</h1>
+        <h1>{{ Setting::getLocalized('posts.title') }}</h1>
 
         <div class="news-category">
             <div class="category-list">
                 <a class="category-item"
                    data-category-id="0"
                    data-category-slug="">
-                    Всі
+                    @lang('main.all')
                 </a>
 
                 @foreach($categories as $category)
                     <a class="category-item"
                        data-category-id="{{ $category->id }}"
                        data-category-slug="{{ $category->slug }}">
-                        {{$category->name }}
+                        {{$category->getTranslatedAttribute('name') }}
                     </a>
                 @endforeach
             </div>
 
             <div class="shown">
+
 
             </div>
         </div>
