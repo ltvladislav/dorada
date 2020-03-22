@@ -31,14 +31,10 @@
             </div>
         </div>
 
-        <div class="recomended">
 
-        </div>
     </div>
 
-
-
-
+    @include('posts.preview')
 
 
 @endsection

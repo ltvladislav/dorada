@@ -1,7 +1,7 @@
 <header>
-    <div class="logo-wrap">
+    <a href="/" class="logo-wrap">
         <img src="{{ asset('/image/dorad.png') }}" alt="">
-    </div>
+    </a>
     <div class="main-header">
         @include('includes.header-socials')
 
