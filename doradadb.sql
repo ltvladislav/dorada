@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Час створення: Бер 21 2020 р., 16:32
+-- Час створення: Бер 22 2020 р., 17:30
 -- Версія сервера: 10.3.13-MariaDB
 -- Версія PHP: 7.3.2
 
@@ -43,7 +43,8 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`id`, `parent_id`, `order`, `name`, `slug`, `created_at`, `updated_at`) VALUES
-(1, NULL, 1, 'Category 1', 'category-1', '2020-03-10 17:24:27', '2020-03-10 17:24:27');
+(1, NULL, 1, 'Категорія 1', 'category-1', '2020-03-10 17:24:27', '2020-03-22 12:23:08'),
+(3, NULL, 1, 'Дорадництво', 'doradnictvo', '2020-03-22 12:23:57', '2020-03-22 12:23:57');
 
 -- --------------------------------------------------------
 
@@ -93,13 +94,13 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (19, 3, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 4),
 (20, 3, 'display_name', 'text', 'Display Name', 1, 1, 1, 1, 1, 1, NULL, 5),
 (21, 1, 'role_id', 'text', 'Role', 1, 1, 1, 1, 1, 1, NULL, 9),
-(22, 4, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, NULL, 1),
+(22, 4, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, '{}', 1),
 (23, 4, 'parent_id', 'select_dropdown', 'Parent', 0, 0, 1, 1, 1, 1, '{\"default\":\"\",\"null\":\"\",\"options\":{\"\":\"-- None --\"},\"relationship\":{\"key\":\"id\",\"label\":\"name\"}}', 2),
 (24, 4, 'order', 'text', 'Order', 1, 1, 1, 1, 1, 1, '{\"default\":1}', 3),
-(25, 4, 'name', 'text', 'Name', 1, 1, 1, 1, 1, 1, NULL, 4),
+(25, 4, 'name', 'text', 'Name', 1, 1, 1, 1, 1, 1, '{}', 4),
 (26, 4, 'slug', 'text', 'Slug', 1, 1, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"name\"}}', 5),
-(27, 4, 'created_at', 'timestamp', 'Created At', 0, 0, 1, 0, 0, 0, NULL, 6),
-(28, 4, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 7),
+(27, 4, 'created_at', 'timestamp', 'Created At', 0, 0, 1, 0, 0, 0, '{}', 6),
+(28, 4, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 7),
 (29, 5, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, NULL, 1),
 (30, 5, 'author_id', 'text', 'Author', 1, 0, 1, 1, 0, 1, NULL, 2),
 (31, 5, 'category_id', 'text', 'Category', 1, 0, 1, 1, 1, 0, NULL, 3),
@@ -218,7 +219,7 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (1, 'users', 'users', 'User', 'Users', 'voyager-person', 'TCG\\Voyager\\Models\\User', 'TCG\\Voyager\\Policies\\UserPolicy', 'TCG\\Voyager\\Http\\Controllers\\VoyagerUserController', '', 1, 0, NULL, '2020-03-10 17:24:10', '2020-03-10 17:24:10'),
 (2, 'menus', 'menus', 'Menu', 'Menus', 'voyager-list', 'TCG\\Voyager\\Models\\Menu', NULL, '', '', 1, 0, NULL, '2020-03-10 17:24:10', '2020-03-10 17:24:10'),
 (3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController', '', 1, 0, NULL, '2020-03-10 17:24:10', '2020-03-10 17:24:10'),
-(4, 'categories', 'categories', 'Category', 'Categories', 'voyager-categories', 'TCG\\Voyager\\Models\\Category', NULL, '', '', 1, 0, NULL, '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
+(4, 'categories', 'categories', 'Category', 'Categories', 'voyager-categories', 'App\\Models\\Posts\\Category', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"desc\",\"default_search_key\":null,\"scope\":null}', '2020-03-10 17:24:27', '2020-03-22 12:22:15'),
 (5, 'posts', 'posts', 'Post', 'Posts', 'voyager-news', 'TCG\\Voyager\\Models\\Post', 'TCG\\Voyager\\Policies\\PostPolicy', '', '', 1, 0, NULL, '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
 (6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, '', '', 1, 0, NULL, '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
 (10, 'infoblock_types', 'infoblock-types', 'Тип інфоблоків', 'Типи інфоблоків', 'voyager-categories', 'App\\Models\\Infoblocks\\InfoblockType', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-03-15 19:00:13', '2020-03-15 19:25:52'),
@@ -335,8 +336,8 @@ CREATE TABLE `infoblock_items` (
 INSERT INTO `infoblock_items` (`id`, `infoblock_id`, `parent_id`, `title`, `sub_title`, `image`, `button_title`, `button_link`, `body`, `order`, `created_at`, `updated_at`) VALUES
 (1, 2, NULL, 'Сільськогосподарське дорадництво', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\1P1YJrUxhGP4bSLnwipR.jpg\",\"original_name\":\"slide1.jpg\"}]', '', NULL, 'Дорадча діяльність як фактор інформаційно-консультаційного забезпечення розвитку сільських територій', 1, '2020-03-21 09:48:46', '2020-03-21 10:02:02'),
 (2, 2, NULL, 'Дорадництво допоможе розвитку малого фермерства в Україні', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\4E7ChOwsmPt84ZtjJT1z.jpg\",\"original_name\":\"slide2.jpg\"}]', '', NULL, 'ФАО реалізує в Україні проект з надання підтримки для переходу до більш ефективної системи надання сільськогосподарських дорадчих послуг', 2, '2020-03-21 10:02:40', '2020-03-21 10:03:26'),
-(3, 3, NULL, 'Підтримка дорадчих служб', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\8n3XnZc5P91v6BayHnMG.svg\",\"original_name\":\"teh-support.svg\"}]', 'Детальніше', NULL, 'УКР Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et eveniet iste minima quasi quidem tenetur! Ad impedit neque nobis porro.', 3, '2020-03-21 10:19:33', '2020-03-21 10:40:58'),
-(4, 3, NULL, 'Навчання та самонавчання користувачів', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\gItQNa6KnIp8rYaW9Hzw.svg\",\"original_name\":\"student.svg\"}]', 'Детальніше', NULL, 'УКР Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et eveniet iste minima quasi quidem tenetur! Ad impedit neque nobis porro.', 4, '2020-03-21 10:21:31', '2020-03-21 10:41:15'),
+(3, 3, NULL, 'Підтримка дорадчих служб', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\8n3XnZc5P91v6BayHnMG.svg\",\"original_name\":\"teh-support.svg\"}]', 'Перейти', NULL, 'УКР Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et eveniet iste minima quasi quidem tenetur! Ad impedit neque nobis porro.', 3, '2020-03-21 10:19:33', '2020-03-21 15:59:23'),
+(4, 3, NULL, 'Навчання та самонавчання користувачів', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\gItQNa6KnIp8rYaW9Hzw.svg\",\"original_name\":\"student.svg\"}]', 'Перейти', NULL, 'УКР Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et eveniet iste minima quasi quidem tenetur! Ad impedit neque nobis porro.', 4, '2020-03-21 10:21:31', '2020-03-21 15:59:10'),
 (5, 3, NULL, 'Електронне дорадницто', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\w0DKpV0PPa9R25yeNBBh.svg\",\"original_name\":\"book.svg\"}]', 'Перейти', NULL, 'УКР Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et eveniet iste minima quasi quidem tenetur! Ad impedit neque nobis porro.', 5, '2020-03-21 10:23:11', '2020-03-21 10:41:32'),
 (6, 4, NULL, 'FAQ', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\P5WlnAV9hhl0SlCxjFGB.svg\",\"original_name\":\"faq.svg\"}]', '', NULL, 'УКР Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi corporis deserunt dicta doloremque earum', 6, '2020-03-21 10:57:22', '2020-03-21 10:58:23'),
 (7, 4, NULL, 'FAQ 2', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\hEUN6GOvtbBuJKJJNAar.svg\",\"original_name\":\"faq.svg\"}]', '', NULL, 'УКР Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi corporis deserunt dicta doloremque earum', 7, '2020-03-21 10:58:38', '2020-03-21 10:59:10'),
@@ -390,7 +391,8 @@ CREATE TABLE `menus` (
 
 INSERT INTO `menus` (`id`, `name`, `created_at`, `updated_at`) VALUES
 (1, 'admin', '2020-03-10 17:24:10', '2020-03-10 17:24:10'),
-(2, 'main-navigation', '2020-03-16 18:52:08', '2020-03-16 18:52:08');
+(2, 'main-navigation', '2020-03-16 18:52:08', '2020-03-16 18:52:08'),
+(3, 'footer-navigation', '2020-03-21 13:45:07', '2020-03-21 13:45:07');
 
 -- --------------------------------------------------------
 
@@ -453,7 +455,20 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `title`, `url`, `target`, `icon_class
 (36, 2, 'Демонстрації', '', '_self', NULL, '#000000', 33, 3, '2020-03-16 19:05:14', '2020-03-16 19:20:45', NULL, ''),
 (37, 1, 'Галереї', '', '_self', 'voyager-photos', NULL, 39, 1, '2020-03-19 19:29:23', '2020-03-19 19:36:52', 'voyager.galleries.index', NULL),
 (38, 1, 'Фото галереї', '', '_self', 'voyager-photo', NULL, 39, 2, '2020-03-19 19:34:03', '2020-03-19 19:36:54', 'voyager.gallery-images.index', NULL),
-(39, 1, 'Галереї', '', '_self', 'voyager-photos', '#000000', NULL, 7, '2020-03-19 19:36:44', '2020-03-19 19:37:13', NULL, '');
+(39, 1, 'Галереї', '', '_self', 'voyager-photos', '#000000', NULL, 7, '2020-03-19 19:36:44', '2020-03-19 19:37:13', NULL, ''),
+(40, 3, 'Послуги', '', '_self', NULL, '#000000', NULL, 3, '2020-03-21 14:02:23', '2020-03-21 14:08:14', NULL, ''),
+(41, 3, 'Консультації', '', '_self', NULL, '#000000', 40, 1, '2020-03-21 14:02:46', '2020-03-21 14:03:26', NULL, ''),
+(42, 3, 'Навчання', '', '_self', NULL, '#000000', 40, 2, '2020-03-21 14:03:01', '2020-03-21 14:03:27', NULL, ''),
+(43, 3, 'Демонстрації', '', '_self', NULL, '#000000', 40, 3, '2020-03-21 14:03:21', '2020-03-21 14:03:29', NULL, ''),
+(44, 3, 'Про асоціацію', '', '_self', NULL, '#000000', NULL, 1, '2020-03-21 14:04:11', '2020-03-21 14:07:35', NULL, ''),
+(45, 3, 'Загальна інформація', '', '_self', NULL, '#000000', 44, 1, '2020-03-21 14:06:29', '2020-03-21 14:07:30', NULL, ''),
+(46, 3, 'Наша команда', '', '_self', NULL, '#000000', 44, 2, '2020-03-21 14:06:47', '2020-03-21 14:07:31', NULL, ''),
+(47, 3, 'Реєстраційні документи', '', '_self', NULL, '#000000', 44, 3, '2020-03-21 14:07:00', '2020-03-21 14:07:32', NULL, ''),
+(48, 3, 'Наша діяльність', '', '_self', NULL, '#000000', 44, 4, '2020-03-21 14:07:18', '2020-03-21 14:07:33', NULL, ''),
+(49, 3, 'Дорадництво', '', '_self', NULL, '#000000', NULL, 2, '2020-03-21 14:07:54', '2020-03-21 14:08:14', NULL, ''),
+(50, 3, 'Сервіси', '', '_self', NULL, '#000000', NULL, 4, '2020-03-21 14:36:53', '2020-03-21 14:38:15', NULL, ''),
+(51, 3, 'Навчання', 'http://edorada.org/moodle/', '_blank', NULL, '#000000', 50, 1, '2020-03-21 14:38:09', '2020-03-21 14:38:15', NULL, ''),
+(52, 2, 'Новини', 'posts', '_self', NULL, '#000000', NULL, 11, '2020-03-21 16:18:38', '2020-03-21 16:18:38', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -812,15 +827,17 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (4, 'site.google_analytics_tracking_id', 'Google Analytics Tracking ID', NULL, '', 'text', 8, 'Site'),
 (5, 'admin.bg_image', 'Admin Background Image', '', '', 'image', 5, 'Admin'),
 (6, 'admin.title', 'Admin Title', 'Dorada Admin', '', 'text', 1, 'Admin'),
-(7, 'admin.description', 'Admin Description', 'Адміністративна панель DORADA. Created by Altair', '', 'text', 2, 'Admin'),
+(7, 'admin.description', 'Admin Description', 'Адміністративна панель DORADA. Created by Zirael', '', 'text', 2, 'Admin'),
 (8, 'admin.loader', 'Admin Loader', '', '', 'image', 3, 'Admin'),
 (9, 'admin.icon_image', 'Admin Icon Image', '', '', 'image', 4, 'Admin'),
 (10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', NULL, '', 'text', 1, 'Admin'),
 (11, 'contacts.mobile-phone', 'Mobile phone', '+380989279554, +380989279554', NULL, 'text', 6, 'Contacts'),
 (12, 'contacts.email', 'Email', 'doradaukraine@gmail.com', NULL, 'text', 7, 'Contacts'),
 (13, 'site.title-en', 'Site Title EN', 'Dorada', NULL, 'text', 2, 'Site'),
-(14, 'posts.preview-title', 'Post preview title', 'Новини', NULL, 'text', 9, 'Posts'),
-(16, 'posts.preview-title-en', 'Post preview title EN', 'News', NULL, 'text', 10, 'Posts');
+(14, 'posts.title', 'Post title', 'Новини', NULL, 'text', 9, 'Posts'),
+(16, 'posts.title-en', 'Post title EN', 'News', NULL, 'text', 10, 'Posts'),
+(17, 'posts.show-more-title', 'Preview more button title', 'Переглянути всі новини', NULL, 'text', 11, 'Posts'),
+(18, 'posts.show-more-title-en', 'Preview more button title EN', 'View all news', NULL, 'text', 12, 'Posts');
 
 -- --------------------------------------------------------
 
@@ -1010,11 +1027,11 @@ INSERT INTO `translations` (`id`, `table_name`, `column_name`, `foreign_key`, `l
 (142, 'infoblock_items', 'title', 3, 'en', 'Support advisory services', '2020-03-21 10:19:33', '2020-03-21 10:19:33'),
 (143, 'infoblock_items', 'body', 3, 'en', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et eveniet iste minima quasi quidem tenetur! Ad impedit neque nobis porro.', '2020-03-21 10:20:53', '2020-03-21 10:20:53'),
 (144, 'infoblock_items', 'title', 4, 'en', 'User education and training', '2020-03-21 10:21:31', '2020-03-21 10:21:31'),
-(145, 'infoblock_items', 'button_title', 4, 'en', 'Go', '2020-03-21 10:22:16', '2020-03-21 10:25:54'),
+(145, 'infoblock_items', 'button_title', 4, 'en', 'Open', '2020-03-21 10:22:16', '2020-03-21 15:59:10'),
 (146, 'infoblock_items', 'body', 4, 'en', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et eveniet iste minima quasi quidem tenetur! Ad impedit neque nobis porro.', '2020-03-21 10:22:16', '2020-03-21 10:22:16'),
-(147, 'infoblock_items', 'button_title', 3, 'en', 'Go', '2020-03-21 10:22:38', '2020-03-21 10:25:44'),
+(147, 'infoblock_items', 'button_title', 3, 'en', 'Open', '2020-03-21 10:22:38', '2020-03-21 15:59:23'),
 (148, 'infoblock_items', 'title', 5, 'en', 'Electronic advisory', '2020-03-21 10:23:11', '2020-03-21 10:23:11'),
-(149, 'infoblock_items', 'button_title', 5, 'en', 'Go', '2020-03-21 10:25:31', '2020-03-21 10:25:31'),
+(149, 'infoblock_items', 'button_title', 5, 'en', 'Open', '2020-03-21 10:25:31', '2020-03-21 15:58:57'),
 (150, 'infoblock_items', 'body', 5, 'en', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et eveniet iste minima quasi quidem tenetur! Ad impedit neque nobis porro.', '2020-03-21 10:25:31', '2020-03-21 10:25:31'),
 (151, 'infoblocks', 'title', 4, 'en', 'Useful links', '2020-03-21 10:56:55', '2020-03-21 10:56:55'),
 (152, 'infoblock_items', 'title', 6, 'en', 'FAQ', '2020-03-21 10:57:22', '2020-03-21 10:57:22'),
@@ -1023,7 +1040,31 @@ INSERT INTO `translations` (`id`, `table_name`, `column_name`, `foreign_key`, `l
 (155, 'infoblock_items', 'body', 7, 'en', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi corporis deserunt dicta doloremque earum', '2020-03-21 10:58:56', '2020-03-21 10:58:56'),
 (156, 'infoblocks', 'title', 5, 'en', 'Our partners', '2020-03-21 11:10:09', '2020-03-21 11:10:09'),
 (157, 'infoblock_items', 'title', 8, 'en', 'ННЦ \"Інститут аграрної економіки\"', '2020-03-21 11:14:46', '2020-03-21 11:14:46'),
-(158, 'infoblock_items', 'title', 9, 'en', 'Журнал \"Землевпорядний вісник\"', '2020-03-21 11:16:52', '2020-03-21 11:16:52');
+(158, 'infoblock_items', 'title', 9, 'en', 'Журнал \"Землевпорядний вісник\"', '2020-03-21 11:16:52', '2020-03-21 11:16:52'),
+(159, 'menu_items', 'title', 40, 'en', 'Services', '2020-03-21 14:02:23', '2020-03-21 14:02:23'),
+(160, 'menu_items', 'title', 41, 'en', 'Consulting', '2020-03-21 14:02:46', '2020-03-21 14:02:46'),
+(161, 'menu_items', 'title', 42, 'en', 'Education', '2020-03-21 14:03:01', '2020-03-21 14:03:01'),
+(162, 'menu_items', 'title', 43, 'en', 'Demonstrations', '2020-03-21 14:03:21', '2020-03-21 14:03:21'),
+(163, 'menu_items', 'title', 44, 'en', 'About association', '2020-03-21 14:04:11', '2020-03-21 14:04:11'),
+(164, 'menu_items', 'title', 45, 'en', 'General information', '2020-03-21 14:06:29', '2020-03-21 14:06:29'),
+(165, 'menu_items', 'title', 46, 'en', 'Our team', '2020-03-21 14:06:47', '2020-03-21 14:06:47'),
+(166, 'menu_items', 'title', 47, 'en', 'Registration documents', '2020-03-21 14:07:00', '2020-03-21 14:07:00'),
+(167, 'menu_items', 'title', 48, 'en', 'Our activity', '2020-03-21 14:07:18', '2020-03-21 14:07:18'),
+(168, 'menu_items', 'title', 49, 'en', 'Doradnitstvo', '2020-03-21 14:07:54', '2020-03-21 14:07:54'),
+(169, 'menu_items', 'title', 50, 'en', 'Services', '2020-03-21 14:36:53', '2020-03-21 14:36:53'),
+(170, 'menu_items', 'title', 51, 'en', 'Moodle', '2020-03-21 14:38:09', '2020-03-21 14:38:09'),
+(171, 'menu_items', 'title', 52, 'en', 'News', '2020-03-21 16:18:38', '2020-03-21 16:18:38'),
+(172, 'data_rows', 'display_name', 22, 'en', 'ID', '2020-03-22 12:22:15', '2020-03-22 12:22:15'),
+(173, 'data_rows', 'display_name', 23, 'en', 'Parent', '2020-03-22 12:22:15', '2020-03-22 12:22:15'),
+(174, 'data_rows', 'display_name', 24, 'en', 'Order', '2020-03-22 12:22:15', '2020-03-22 12:22:15'),
+(175, 'data_rows', 'display_name', 25, 'en', 'Name', '2020-03-22 12:22:15', '2020-03-22 12:22:15'),
+(176, 'data_rows', 'display_name', 26, 'en', 'Slug', '2020-03-22 12:22:15', '2020-03-22 12:22:15'),
+(177, 'data_rows', 'display_name', 27, 'en', 'Created At', '2020-03-22 12:22:15', '2020-03-22 12:22:15'),
+(178, 'data_rows', 'display_name', 28, 'en', 'Updated At', '2020-03-22 12:22:15', '2020-03-22 12:22:15'),
+(179, 'data_types', 'display_name_singular', 4, 'en', 'Category', '2020-03-22 12:22:15', '2020-03-22 12:22:15'),
+(180, 'data_types', 'display_name_plural', 4, 'en', 'Categories', '2020-03-22 12:22:15', '2020-03-22 12:22:15'),
+(181, 'categories', 'name', 1, 'en', 'Category 1', '2020-03-22 12:23:08', '2020-03-22 12:23:08'),
+(182, 'categories', 'name', 3, 'en', 'Dorad', '2020-03-22 12:23:57', '2020-03-22 12:23:57');
 
 -- --------------------------------------------------------
 
@@ -1237,7 +1278,7 @@ ALTER TABLE `user_roles`
 -- AUTO_INCREMENT для таблиці `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблиці `data_rows`
@@ -1291,13 +1332,13 @@ ALTER TABLE `infoblock_types`
 -- AUTO_INCREMENT для таблиці `menus`
 --
 ALTER TABLE `menus`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT для таблиці `menu_items`
 --
 ALTER TABLE `menu_items`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 
 --
 -- AUTO_INCREMENT для таблиці `migrations`
@@ -1333,7 +1374,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT для таблиці `settings`
 --
 ALTER TABLE `settings`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT для таблиці `social_networks`
@@ -1345,7 +1386,7 @@ ALTER TABLE `social_networks`
 -- AUTO_INCREMENT для таблиці `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=183;
 
 --
 -- AUTO_INCREMENT для таблиці `users`
