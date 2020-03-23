@@ -7,7 +7,6 @@
     </div>
 
     <a href="{{ url('posts') }}" class="more">{{ Setting::getLocalized('posts.show-more-title') }}</a>
-
 </div>
 
 
