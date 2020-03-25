@@ -101,8 +101,8 @@ if (mix.inProduction()) {
 } else {
     //section for development, will not work IE11<, safari 9.1.3<
     mix.js(["resources/js/app.js"], "public/js/app.js");
-    // mix.js(["resources/js/ajax-module.js"], "public/js/ajax-module.js");
-    // mix.js(["resources/js/Helper.js"], "public/js/Helper.js");
+    mix.js(["resources/js/ajax-module.js"], "public/js/ajax-module.js");
+    mix.js(["resources/js/Helper.js"], "public/js/Helper.js");
     mix.copyDirectory("resources/image", "public/image");
 }
 
