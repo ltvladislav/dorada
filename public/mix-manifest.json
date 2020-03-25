@@ -1,4 +1,6 @@
 {
+    "/js/Helper.js": "/js/Helper.js",
+    "/js/ajax-module.js": "/js/ajax-module.js",
     "/js/app.js": "/js/app.js",
     "/css/app.css": "/css/app.css",
     "/js/manifest.js": "/js/manifest.js",
