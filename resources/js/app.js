@@ -99,6 +99,12 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     loadAndResize();
 
+    isExist('.editor-content > table', () => {
+        document.querySelectorAll('.editor-content > table').forEach((table, index) => {
+            addTableWrap(table, index)
+        })
+    });
+
     isExist('.main-slider', () => {
         let slider = document.querySelector('.main-slider');
 
@@ -176,4 +182,16 @@ function onCloseModal() {
     document.documentElement.style.marginRight = ``;
     document.querySelector('header').style.marginRight = ``;
 
+}
+
+function addTableWrap(table, index) {
+    let wrapper = document.createElement('div');
+    wrapper.setAttribute('data-table-index', index);
+    wrapper.classList.add('table-wrap');
+
+    let caption = table.caption ? `<h3>${table.caption.innerHTML}</h3>` : '';
+    table.insertAdjacentHTML('beforebegin', caption);
+    table.insertAdjacentElement('beforebegin', wrapper);
+
+    wrapper.appendChild(table)
 }
