@@ -24,6 +24,7 @@
         "vue-template-compiler": "^2.6.10"
     },
     "dependencies": {
+        "@fancyapps/fancybox": "^3.5.7",
         "css-mqpacker": "^7.0.0",
         "laravel-mix-purgecss": "^5.0.0-rc.1",
         "slick-carousel": "^1.8.1",
