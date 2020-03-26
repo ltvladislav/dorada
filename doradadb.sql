@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Час створення: Бер 22 2020 р., 17:56
+-- Час створення: Бер 27 2020 р., 00:06
 -- Версія сервера: 10.3.13-MariaDB
 -- Версія PHP: 7.3.2
 
@@ -116,18 +116,18 @@ INSERT INTO `data_rows` (`id`, `data_type_id`, `field`, `type`, `display_name`, 
 (41, 5, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, NULL, 13),
 (42, 5, 'seo_title', 'text', 'SEO Title', 0, 1, 1, 1, 1, 1, NULL, 14),
 (43, 5, 'featured', 'checkbox', 'Featured', 1, 1, 1, 1, 1, 1, NULL, 15),
-(44, 6, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, NULL, 1),
-(45, 6, 'author_id', 'text', 'Author', 1, 0, 0, 0, 0, 0, NULL, 2),
-(46, 6, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, NULL, 3),
-(47, 6, 'excerpt', 'text_area', 'Excerpt', 1, 0, 1, 1, 1, 1, NULL, 4),
-(48, 6, 'body', 'rich_text_box', 'Body', 1, 0, 1, 1, 1, 1, NULL, 5),
-(49, 6, 'slug', 'text', 'Slug', 1, 0, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"title\"},\"validation\":{\"rule\":\"unique:pages,slug\"}}', 6),
-(50, 6, 'meta_description', 'text', 'Meta Description', 1, 0, 1, 1, 1, 1, NULL, 7),
-(51, 6, 'meta_keywords', 'text', 'Meta Keywords', 1, 0, 1, 1, 1, 1, NULL, 8),
+(44, 6, 'id', 'number', 'ID', 1, 0, 0, 0, 0, 0, '{}', 1),
+(45, 6, 'author_id', 'text', 'Author', 1, 0, 0, 0, 0, 0, '{}', 2),
+(46, 6, 'title', 'text', 'Title', 1, 1, 1, 1, 1, 1, '{}', 3),
+(47, 6, 'excerpt', 'text_area', 'Excerpt', 0, 0, 1, 1, 1, 1, '{}', 5),
+(48, 6, 'body', 'rich_text_box', 'Body', 0, 0, 1, 1, 1, 1, '{}', 6),
+(49, 6, 'slug', 'text', 'Slug', 1, 0, 1, 1, 1, 1, '{\"slugify\":{\"origin\":\"title\"},\"validation\":{\"rule\":\"unique:pages,slug\"}}', 4),
+(50, 6, 'meta_description', 'text', 'Meta Description', 0, 0, 1, 1, 1, 1, '{}', 7),
+(51, 6, 'meta_keywords', 'text', 'Meta Keywords', 0, 0, 1, 1, 1, 1, '{}', 8),
 (52, 6, 'status', 'select_dropdown', 'Status', 1, 1, 1, 1, 1, 1, '{\"default\":\"INACTIVE\",\"options\":{\"INACTIVE\":\"INACTIVE\",\"ACTIVE\":\"ACTIVE\"}}', 9),
-(53, 6, 'created_at', 'timestamp', 'Created At', 1, 1, 1, 0, 0, 0, NULL, 10),
-(54, 6, 'updated_at', 'timestamp', 'Updated At', 1, 0, 0, 0, 0, 0, NULL, 11),
-(55, 6, 'image', 'image', 'Page Image', 0, 1, 1, 1, 1, 1, NULL, 12),
+(53, 6, 'created_at', 'timestamp', 'Created At', 0, 1, 1, 0, 0, 0, '{}', 10),
+(54, 6, 'updated_at', 'timestamp', 'Updated At', 0, 0, 0, 0, 0, 0, '{}', 11),
+(55, 6, 'image', 'image', 'Page Image', 0, 1, 1, 1, 1, 1, '{}', 12),
 (100, 10, 'id', 'number', 'Id', 1, 0, 0, 0, 0, 0, '{}', 1),
 (101, 10, 'name', 'text', 'Назва', 1, 1, 1, 1, 1, 1, '{}', 2),
 (102, 10, 'blade_path', 'text', 'Шлях до файлу', 1, 1, 1, 1, 1, 0, '{}', 3),
@@ -221,7 +221,7 @@ INSERT INTO `data_types` (`id`, `name`, `slug`, `display_name_singular`, `displa
 (3, 'roles', 'roles', 'Role', 'Roles', 'voyager-lock', 'TCG\\Voyager\\Models\\Role', NULL, 'TCG\\Voyager\\Http\\Controllers\\VoyagerRoleController', '', 1, 0, NULL, '2020-03-10 17:24:10', '2020-03-10 17:24:10'),
 (4, 'categories', 'categories', 'Category', 'Categories', 'voyager-categories', 'App\\Models\\Posts\\Category', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"desc\",\"default_search_key\":null,\"scope\":null}', '2020-03-10 17:24:27', '2020-03-22 12:22:15'),
 (5, 'posts', 'posts', 'Post', 'Posts', 'voyager-news', 'TCG\\Voyager\\Models\\Post', 'TCG\\Voyager\\Policies\\PostPolicy', '', '', 1, 0, NULL, '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
-(6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'TCG\\Voyager\\Models\\Page', NULL, '', '', 1, 0, NULL, '2020-03-10 17:24:27', '2020-03-10 17:24:27'),
+(6, 'pages', 'pages', 'Page', 'Pages', 'voyager-file-text', 'App\\Models\\Pages\\Page', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"desc\",\"default_search_key\":null,\"scope\":null}', '2020-03-10 17:24:27', '2020-03-25 17:53:35'),
 (10, 'infoblock_types', 'infoblock-types', 'Тип інфоблоків', 'Типи інфоблоків', 'voyager-categories', 'App\\Models\\Infoblocks\\InfoblockType', NULL, NULL, NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-03-15 19:00:13', '2020-03-15 19:25:52'),
 (11, 'infoblocks', 'infoblocks', 'Інфоблок', 'Інфоблоки', 'voyager-photos', 'App\\Models\\Infoblocks\\Infoblock', NULL, 'App\\Http\\Controllers\\WithItemsBase\\BaseWithItemsController', NULL, 1, 0, '{\"order_column\":null,\"order_display_column\":null,\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-03-15 19:05:35', '2020-03-15 19:27:43'),
 (12, 'infoblock_items', 'infoblock-items', 'Елемент інфоблоку', 'Елементи інфоблоків', 'voyager-photo', 'App\\Models\\Infoblocks\\InfoblockItem', NULL, 'App\\Http\\Controllers\\WithItemsBase\\BaseItemController', NULL, 1, 0, '{\"order_column\":\"order\",\"order_display_column\":\"title\",\"order_direction\":\"asc\",\"default_search_key\":null,\"scope\":null}', '2020-03-15 19:15:20', '2020-03-21 10:59:39'),
@@ -260,6 +260,13 @@ CREATE TABLE `galleries` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Дамп даних таблиці `galleries`
+--
+
+INSERT INTO `galleries` (`id`, `name`, `slug`, `title`, `sub_title`, `created_at`, `updated_at`) VALUES
+(1, 'Тест', 'test', 'Галерея', '', '2020-03-26 18:47:23', '2020-03-26 18:47:23');
+
 -- --------------------------------------------------------
 
 --
@@ -269,12 +276,23 @@ CREATE TABLE `galleries` (
 CREATE TABLE `gallery_images` (
   `id` bigint(20) UNSIGNED NOT NULL,
   `gallery_id` int(10) UNSIGNED NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `caption` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `order` int(11) NOT NULL DEFAULT 0,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп даних таблиці `gallery_images`
+--
+
+INSERT INTO `gallery_images` (`id`, `gallery_id`, `image`, `caption`, `order`, `created_at`, `updated_at`) VALUES
+(1, 1, 'gallery-images\\March2020\\OKN6bx3Xlxq0R8nbiddS.png', '1', 1, '2020-03-26 18:49:33', '2020-03-26 18:49:46'),
+(2, 1, 'gallery-images\\March2020\\2U0Rt0SaiYQVomkJhBHv.png', '2', 2, '2020-03-26 18:49:54', '2020-03-26 18:50:01'),
+(3, 1, 'gallery-images\\March2020\\OP4mwo3vrws5n1mYfGZQ.png', '3', 3, '2020-03-26 18:50:07', '2020-03-26 18:50:14'),
+(4, 1, 'gallery-images\\March2020\\4rXldOOgaGpvTAq7xdLY.png', '4', 4, '2020-03-26 18:50:30', '2020-03-26 18:50:37'),
+(5, 1, 'gallery-images\\March2020\\2YM7w1vJwKLSYTCPQ8WS.png', '5', 5, '2020-03-26 18:50:43', '2020-03-26 18:50:50');
 
 -- --------------------------------------------------------
 
@@ -306,7 +324,8 @@ INSERT INTO `infoblocks` (`id`, `name`, `slug`, `type_id`, `title`, `sub_title`,
 (2, 'Слайдер (головна)', 'slajder-golovna', 2, '', '', '', '', NULL, NULL, '2020-03-21 09:40:12', '2020-03-21 09:40:12'),
 (3, 'Сервіси (головна)', 'servisi-golovna', 3, '', '', '', '', NULL, NULL, '2020-03-21 10:19:00', '2020-03-21 10:19:00'),
 (4, 'Корисні посилання (головна)', 'korisni-posilannya-golovna', 4, 'Корисні посилання', '', '', '', NULL, NULL, '2020-03-21 10:56:55', '2020-03-21 10:56:55'),
-(5, 'Наші партнери (головна)', 'nashi-partneri-golovna', 5, 'Наші партнери', '', '', '', NULL, NULL, '2020-03-21 11:10:09', '2020-03-21 11:10:09');
+(5, 'Наші партнери (головна)', 'nashi-partneri-golovna', 5, 'Наші партнери', '', '', '', NULL, NULL, '2020-03-21 11:10:09', '2020-03-21 11:10:09'),
+(6, 'Наші цінності', 'nashi-cinnosti', 6, 'Наші цінності', '', '', '', NULL, NULL, '2020-03-26 18:37:45', '2020-03-26 18:37:45');
 
 -- --------------------------------------------------------
 
@@ -342,7 +361,10 @@ INSERT INTO `infoblock_items` (`id`, `infoblock_id`, `parent_id`, `title`, `sub_
 (6, 4, NULL, 'FAQ', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\P5WlnAV9hhl0SlCxjFGB.svg\",\"original_name\":\"faq.svg\"}]', '', NULL, 'УКР Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi corporis deserunt dicta doloremque earum', 6, '2020-03-21 10:57:22', '2020-03-21 10:58:23'),
 (7, 4, NULL, 'FAQ 2', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\hEUN6GOvtbBuJKJJNAar.svg\",\"original_name\":\"faq.svg\"}]', '', NULL, 'УКР Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam animi corporis deserunt dicta doloremque earum', 7, '2020-03-21 10:58:38', '2020-03-21 10:59:10'),
 (8, 5, NULL, 'ННЦ \"Інститут аграрної економіки\"', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\Gry65VDjCL7BVBIQanLJ.jpg\",\"original_name\":\"partner1.jpg\"}]', '', 'http://iae.faaf.org.ua/', '', 8, '2020-03-21 11:10:36', '2020-03-21 11:14:46'),
-(9, 5, NULL, 'Журнал \"Землевпорядний вісник\"', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\FuwT1xMSsLiVmTgH6n1j.jpg\",\"original_name\":\"Visnik.jpg\"}]', '', 'http://zemvisnuk.com.ua/', '', 9, '2020-03-21 11:16:52', '2020-03-21 11:17:08');
+(9, 5, NULL, 'Журнал \"Землевпорядний вісник\"', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\FuwT1xMSsLiVmTgH6n1j.jpg\",\"original_name\":\"Visnik.jpg\"}]', '', 'http://zemvisnuk.com.ua/', '', 9, '2020-03-21 11:16:52', '2020-03-21 11:17:08'),
+(10, 6, NULL, 'Лорем іпсум', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\GzG4DhycPRM0pF8L2xCK.svg\",\"original_name\":\"adv1.svg\"}]', '', NULL, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 10, '2020-03-26 18:38:16', '2020-03-26 18:38:56'),
+(11, 6, NULL, 'Лорем 2', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\yn9d1N82PnqrNK0E35R8.svg\",\"original_name\":\"adv1.svg\"}]', '', NULL, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 11, '2020-03-26 18:39:17', '2020-03-26 18:39:32'),
+(13, 6, NULL, 'Іпсум 3', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\YmXWRAProhPWAZehs1tg.svg\",\"original_name\":\"book.svg\"}]', '', NULL, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 13, '2020-03-26 18:39:52', '2020-03-26 18:40:11');
 
 -- --------------------------------------------------------
 
@@ -370,7 +392,8 @@ INSERT INTO `infoblock_types` (`id`, `name`, `blade_path`, `public`, `with_items
 (2, 'Слайдер (головний)', 'slider', 0, 1, 0, '2020-03-21 09:04:54', '2020-03-21 09:04:54'),
 (3, 'Сервіси (головна)', 'services', 0, 1, 0, '2020-03-21 09:05:54', '2020-03-21 09:05:54'),
 (4, 'Корисні посилання', 'useful-links', 0, 1, 0, '2020-03-21 10:56:12', '2020-03-21 10:56:12'),
-(5, 'Слайдер (партнери)', 'partners-slider', 0, 1, 0, '2020-03-21 11:08:25', '2020-03-21 11:08:25');
+(5, 'Слайдер (партнери)', 'partners-slider', 0, 1, 0, '2020-03-21 11:08:25', '2020-03-21 11:08:25'),
+(6, 'Картки (Іконка + опис)', 'advantages', 0, 1, 0, '2020-03-26 18:36:15', '2020-03-26 18:42:27');
 
 -- --------------------------------------------------------
 
@@ -547,7 +570,8 @@ CREATE TABLE `pages` (
 --
 
 INSERT INTO `pages` (`id`, `author_id`, `title`, `excerpt`, `body`, `image`, `slug`, `meta_description`, `meta_keywords`, `status`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Привіт світ', 'Hang the jib grog grog blossom grapple dance the hempen jig gangway pressgang bilge rat to go on account lugger. Nelsons folly gabion line draught scallywag fire ship gaff fluke fathom case shot. Sea Legs bilge rat sloop matey gabion long clothes run a shot across the bow Gold Road cog league.', '<p>Hello World. Scallywag grog swab Cat o\'nine tails scuttle rigging hardtack cable nipper Yellow Jack. Handsomely spirits knave lad killick landlubber or just lubber deadlights chantey pinnace crack Jennys tea cup. Provost long clothes black spot Yellow Jack bilged on her anchor league lateen sail case shot lee tackle.</p>\n<p>Ballast spirits fluke topmast me quarterdeck schooner landlubber or just lubber gabion belaying pin. Pinnace stern galleon starboard warp carouser to go on account dance the hempen jig jolly boat measured fer yer chains. Man-of-war fire in the hole nipperkin handsomely doubloon barkadeer Brethren of the Coast gibbet driver squiffy.</p>', 'pages/page1.jpg', 'hello-world', 'Yar Meta Description', 'Keyword1, Keyword2', 'ACTIVE', '2020-03-10 17:24:27', '2020-03-18 16:44:16');
+(1, 1, 'Привіт світ', 'Hang the jib grog grog blossom grapple dance the hempen jig gangway pressgang bilge rat to go on account lugger. Nelsons folly gabion line draught scallywag fire ship gaff fluke fathom case shot. Sea Legs bilge rat sloop matey gabion long clothes run a shot across the bow Gold Road cog league.', '<p>Hello World. Scallywag grog swab Cat o\'nine tails scuttle rigging hardtack cable nipper Yellow Jack. Handsomely spirits knave lad killick landlubber or just lubber deadlights chantey pinnace crack Jennys tea cup. Provost long clothes black spot Yellow Jack bilged on her anchor league lateen sail case shot lee tackle.</p>\n<p>Ballast spirits fluke topmast me quarterdeck schooner landlubber or just lubber gabion belaying pin. Pinnace stern galleon starboard warp carouser to go on account dance the hempen jig jolly boat measured fer yer chains. Man-of-war fire in the hole nipperkin handsomely doubloon barkadeer Brethren of the Coast gibbet driver squiffy.</p>\n<p>&nbsp;</p>\n<p>[infoblock code=\"nashi-cinnosti\"]</p>\n<p>[gallery code=\"test\"]</p>', 'pages/page1.jpg', 'hello-world', 'Yar Meta Description', 'Keyword1, Keyword2', 'ACTIVE', '2020-03-10 17:24:27', '2020-03-26 19:00:52'),
+(2, 1, 'Тест файлів', '', '<p>&nbsp;</p>\n<p><span style=\"color: #ff0000;\"><strong><a style=\"color: #ff0000;\" title=\"Розклад тайтл\" href=\"http://dorada.com/storage/files/%D0%A0%D0%BE%D0%B7%D0%BA%D0%BB%D0%B0%D0%B4%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D1%8C.xlsx\" target=\"_blank\" rel=\"noopener\">Розклад</a></strong></span></p>', NULL, 'test-fajliv', '', '', 'INACTIVE', '2020-03-25 18:00:36', '2020-03-25 18:03:50');
 
 -- --------------------------------------------------------
 
@@ -1064,7 +1088,39 @@ INSERT INTO `translations` (`id`, `table_name`, `column_name`, `foreign_key`, `l
 (179, 'data_types', 'display_name_singular', 4, 'en', 'Category', '2020-03-22 12:22:15', '2020-03-22 12:22:15'),
 (180, 'data_types', 'display_name_plural', 4, 'en', 'Categories', '2020-03-22 12:22:15', '2020-03-22 12:22:15'),
 (181, 'categories', 'name', 1, 'en', 'Category 1', '2020-03-22 12:23:08', '2020-03-22 12:23:08'),
-(182, 'categories', 'name', 3, 'en', 'Dorad', '2020-03-22 12:23:57', '2020-03-22 12:23:57');
+(182, 'categories', 'name', 3, 'en', 'Dorad', '2020-03-22 12:23:57', '2020-03-22 12:23:57'),
+(183, 'data_rows', 'display_name', 44, 'en', 'ID', '2020-03-25 17:53:35', '2020-03-25 17:53:35'),
+(184, 'data_rows', 'display_name', 45, 'en', 'Author', '2020-03-25 17:53:35', '2020-03-25 17:53:35'),
+(185, 'data_rows', 'display_name', 46, 'en', 'Title', '2020-03-25 17:53:35', '2020-03-25 17:53:35'),
+(186, 'data_rows', 'display_name', 47, 'en', 'Excerpt', '2020-03-25 17:53:35', '2020-03-25 17:53:35'),
+(187, 'data_rows', 'display_name', 48, 'en', 'Body', '2020-03-25 17:53:35', '2020-03-25 17:53:35'),
+(188, 'data_rows', 'display_name', 55, 'en', 'Page Image', '2020-03-25 17:53:35', '2020-03-25 17:53:35'),
+(189, 'data_rows', 'display_name', 49, 'en', 'Slug', '2020-03-25 17:53:35', '2020-03-25 17:53:35'),
+(190, 'data_rows', 'display_name', 50, 'en', 'Meta Description', '2020-03-25 17:53:35', '2020-03-25 17:53:35'),
+(191, 'data_rows', 'display_name', 51, 'en', 'Meta Keywords', '2020-03-25 17:53:35', '2020-03-25 17:53:35'),
+(192, 'data_rows', 'display_name', 52, 'en', 'Status', '2020-03-25 17:53:35', '2020-03-25 17:53:35'),
+(193, 'data_rows', 'display_name', 53, 'en', 'Created At', '2020-03-25 17:53:35', '2020-03-25 17:53:35'),
+(194, 'data_rows', 'display_name', 54, 'en', 'Updated At', '2020-03-25 17:53:35', '2020-03-25 17:53:35'),
+(195, 'data_types', 'display_name_singular', 6, 'en', 'Page', '2020-03-25 17:53:35', '2020-03-25 17:53:35'),
+(196, 'data_types', 'display_name_plural', 6, 'en', 'Pages', '2020-03-25 17:53:35', '2020-03-25 17:53:35'),
+(197, 'pages', 'title', 2, 'en', 'Тест файлів', '2020-03-25 18:03:50', '2020-03-25 18:03:50'),
+(198, 'pages', 'body', 2, 'en', '<p>&nbsp;</p>\n<p><a title=\"Розклад тайтл\" href=\"http://dorada.com/storage/files/%D0%A0%D0%BE%D0%B7%D0%BA%D0%BB%D0%B0%D0%B4%20%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D1%8C.xlsx\" target=\"_blank\" rel=\"noopener\">Розклад</a></p>', '2020-03-25 18:03:50', '2020-03-25 18:03:50'),
+(199, 'infoblocks', 'title', 6, 'en', 'Our values', '2020-03-26 18:37:45', '2020-03-26 18:37:45'),
+(200, 'infoblock_items', 'title', 10, 'en', 'Lorem ipsum', '2020-03-26 18:38:16', '2020-03-26 18:38:16'),
+(201, 'infoblock_items', 'body', 10, 'en', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2020-03-26 18:38:56', '2020-03-26 18:38:56'),
+(202, 'infoblock_items', 'title', 11, 'en', 'Lorem ipsum 2', '2020-03-26 18:39:17', '2020-03-26 18:39:17'),
+(203, 'infoblock_items', 'body', 11, 'en', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2020-03-26 18:39:32', '2020-03-26 18:39:32'),
+(205, 'infoblock_items', 'title', 13, 'en', 'Lorem ipsum 3', '2020-03-26 18:39:52', '2020-03-26 18:39:52'),
+(206, 'infoblock_items', 'body', 13, 'en', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', '2020-03-26 18:40:11', '2020-03-26 18:40:11'),
+(207, 'pages', 'excerpt', 1, 'en', 'Hang the jib grog grog blossom grapple dance the hempen jig gangway pressgang bilge rat to go on account lugger. Nelsons folly gabion line draught scallywag fire ship gaff fluke fathom case shot. Sea Legs bilge rat sloop matey gabion long clothes run a shot across the bow Gold Road cog league.', '2020-03-26 18:45:05', '2020-03-26 18:45:05'),
+(208, 'pages', 'meta_description', 1, 'en', 'Yar Meta Description', '2020-03-26 18:45:05', '2020-03-26 18:45:05'),
+(209, 'pages', 'meta_keywords', 1, 'en', 'Keyword1, Keyword2', '2020-03-26 18:45:05', '2020-03-26 18:45:05'),
+(210, 'galleries', 'title', 1, 'en', 'Gallery', '2020-03-26 18:47:40', '2020-03-26 18:47:40'),
+(211, 'gallery_images', 'caption', 1, 'en', '1', '2020-03-26 18:49:46', '2020-03-26 18:49:46'),
+(212, 'gallery_images', 'caption', 2, 'en', '2', '2020-03-26 18:50:01', '2020-03-26 18:50:01'),
+(213, 'gallery_images', 'caption', 3, 'en', '3', '2020-03-26 18:50:14', '2020-03-26 18:50:14'),
+(214, 'gallery_images', 'caption', 4, 'en', '4', '2020-03-26 18:50:37', '2020-03-26 18:50:37'),
+(215, 'gallery_images', 'caption', 5, 'en', '5', '2020-03-26 18:50:50', '2020-03-26 18:50:50');
 
 -- --------------------------------------------------------
 
@@ -1302,31 +1358,31 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT для таблиці `galleries`
 --
 ALTER TABLE `galleries`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблиці `gallery_images`
 --
 ALTER TABLE `gallery_images`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT для таблиці `infoblocks`
 --
 ALTER TABLE `infoblocks`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT для таблиці `infoblock_items`
 --
 ALTER TABLE `infoblock_items`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT для таблиці `infoblock_types`
 --
 ALTER TABLE `infoblock_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT для таблиці `menus`
@@ -1350,7 +1406,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT для таблиці `pages`
 --
 ALTER TABLE `pages`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблиці `permissions`
@@ -1386,7 +1442,7 @@ ALTER TABLE `social_networks`
 -- AUTO_INCREMENT для таблиці `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=183;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=216;
 
 --
 -- AUTO_INCREMENT для таблиці `users`
