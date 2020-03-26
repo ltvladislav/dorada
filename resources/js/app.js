@@ -50,7 +50,7 @@ import $ from "jquery";
 
 // window.$ = window.jQuery = $;
 require("slick-carousel");
-// require("@fancyapps/fancybox");
+require("@fancyapps/fancybox");
 // import "jquery-ui/ui/widgets/slider";
 // import "jquery-ui/ui/widgets/datepicker";
 // import "jquery-ui-touch-punch";
@@ -153,6 +153,9 @@ function loadAndResize() {
         document.querySelector('.main-slider').style.height = window.innerHeight - window.site.headerHeight + 'px';
         document.querySelector('.main-slider-wrap').style.height = window.innerHeight - window.site.headerHeight + 'px';
     });
+
+    isExist('.gallery', () => {
+    })
 
 }
 

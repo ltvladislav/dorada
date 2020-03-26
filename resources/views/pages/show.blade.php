@@ -3,7 +3,7 @@
 @section('title', $page->title)
 
 @section('description', '')
-@section('body_class', '')
+@section('body_class', 'default-page')
 @section('wrapper_class', '')
 
 
@@ -22,6 +22,9 @@
     <div class="editor-wrap">
         <div class="editor-content">
             {!! $page->body !!}
+
+            @include('infoblocks.advatages.index')
+            @include('galleries.index')
         </div>
     </div>
 

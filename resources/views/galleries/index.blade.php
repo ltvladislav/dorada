@@ -1,21 +1,23 @@
 <div class="gallery-wrap">
-    <div class="block-title">
-        <p class="block-heading">{{ $gallery->title }}</p>
-       <div class="block-title-decor">
-            <div class="line left"></div>
-            <div class="block-title-icon">
-                <svg><use xlink:href="#cup"></use></svg>
-            </div>
-            <div class="line right"></div>
-        </div>
-    </div>
+
+    <p class="block-title left">Галерея</p>
 
     <div class="gallery">
-        @foreach($gallery->images as $image)
-            @include('galleries/item', [
-                'image' => $image
-            ])
-        @endforeach
+        <a href="{{ asset('/image/gallery1.png') }}" class="small" data-fancybox="gallery">
+            <img src="{{ asset('/image/gallery1.png') }}" alt="" >
+        </a>
+        <a href="{{ asset('/image/gallery2.png') }}" class="big" data-fancybox="gallery">
+            <img src="{{ asset('/image/gallery2.png') }}" alt="" >
+        </a>
+        <a href="{{ asset('/image/gallery2.png') }}" class="big" data-fancybox="gallery">
+            <img src="{{ asset('/image/gallery2.png') }}" alt="" >
+        </a>
+        <a href="{{ asset('/image/gallery1.png') }}" data-fancybox="gallery" class="small">
+            <img src="{{ asset('/image/gallery1.png') }}" alt="" >
+        </a>
+
+        <a href="{{ asset('/image/gallery1.png') }}" data-fancybox="gallery" style="display: none"></a>
+
     </div>
 
 </div>
