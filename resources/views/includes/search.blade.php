@@ -1,4 +1,7 @@
 <div class="search" data-toggle-block="search-form">
+    <script async src="https://cse.google.com/cse.js?cx=012010229175199226711:g79fumb7agq"></script>
+    <div class="gcse-search"></div>
+
 
     <div class="search-form" data-toggle-block="search">
         <div class="search-icon">

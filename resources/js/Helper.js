@@ -41,6 +41,7 @@ window.Helper.callService = function(serviceName, args, callback, scope) {
     })
 };
 
+
 window.Helper.getSession = function(key, callback, scope) {
     Helper.callService("sessionService", {
         method: "get",

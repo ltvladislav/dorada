@@ -22,7 +22,7 @@
     <script>
         console.log("Hello")
         window.site = {
-
+            language: '{{ LaravelLocalization::getCurrentLocale() }}'
 
         };
     </script>

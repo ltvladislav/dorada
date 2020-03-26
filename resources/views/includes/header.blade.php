@@ -10,6 +10,7 @@
             <nav>
                 {{ menu('main-navigation', 'menus/main-navigation') }}
             </nav>
+
             <div class="search-btn">
                 <svg><use xlink:href="#search"></use></svg>
             </div>

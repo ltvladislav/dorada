@@ -2,7 +2,7 @@ import {isExist} from "./delta-functions";
 
 window.postConfig = {
     categoryId: 0,
-    pageNumber: 0
+    pageNumber: 1
 };
 
 document.querySelectorAll('.category-item').forEach(function(item) {
@@ -19,7 +19,7 @@ function categoryClick(categoryItem) {
         categoryId: categoryId,
         pageNumber: 0
     };
-    Helper.callService('postService', {
+    Helper.callService(window.site.language + '/postService', {
             methodName: 'getPostByCategory',
             data: window.postConfig
         }, function(response) {
@@ -33,11 +33,7 @@ function categoryClick(categoryItem) {
         else if (document.querySelector('.pagination-wrap').classList.contains('hidden')) {
             document.querySelector('.pagination-wrap').classList.remove('hidden');
         }
-
-        window.postConfig = {
-            categoryId: categoryId,
-            pageNumber: 0
-        };
+        window.postConfig.pageNumber++;
     })
 }
 
@@ -56,7 +52,7 @@ global.showMoreClick = function(showMoreButton) {
 }
 let showMores = {
     posts: function() {
-        Helper.callService('postService', {
+        Helper.callService(window.site.language + '/postService', {
             methodName: 'getPostByCategory',
             data: window.postConfig
         }, function(response) {
@@ -65,7 +61,7 @@ let showMores = {
             if (!response.existsMore) {
                 document.querySelector('.pagination-wrap').classList.add('hidden');
             }
-            window.postConfig.pageNumber ++;
+            window.postConfig.pageNumber++;
         })
     }
 

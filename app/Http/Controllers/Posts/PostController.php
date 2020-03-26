@@ -92,7 +92,7 @@ class PostController extends \TCG\Voyager\Http\Controllers\VoyagerBaseController
     }
     private static function existsMorePost($config) {
         $categoryId = $config['categoryId'];
-        $skip = ($config['pageNumber'] + 1) * 6;
+        $skip = ($config['pageNumber'] + 1) * static::PAGINATE_COUNT;
         return count($categoryId == 0 ?
             Post::last()->skip($skip)->take(1)->get() :
             Post::getByCategory($categoryId, $skip, 1)) > 0;

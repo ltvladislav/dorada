@@ -12,6 +12,7 @@ class Post extends \TCG\Voyager\Models\Post
     use Imageable;
 
     protected $image_column = 'image';
+    protected $translatable = ['title', 'seo_title', 'excerpt', 'body', 'meta_description', 'meta_keywords'];
 
     public function save(array $options = [])
     {
