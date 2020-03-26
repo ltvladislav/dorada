@@ -16,7 +16,7 @@ class CreateGalleryImagesTable extends Migration
         Schema::create('gallery_images', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedInteger('gallery_id');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->string('caption')->nullable();
             $table->integer('order')->default(0);
 
