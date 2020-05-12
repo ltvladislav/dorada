@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Час створення: Бер 27 2020 р., 00:06
+-- Час створення: Трв 12 2020 р., 22:29
 -- Версія сервера: 10.3.13-MariaDB
 -- Версія PHP: 7.3.2
 
@@ -325,7 +325,8 @@ INSERT INTO `infoblocks` (`id`, `name`, `slug`, `type_id`, `title`, `sub_title`,
 (3, 'Сервіси (головна)', 'servisi-golovna', 3, '', '', '', '', NULL, NULL, '2020-03-21 10:19:00', '2020-03-21 10:19:00'),
 (4, 'Корисні посилання (головна)', 'korisni-posilannya-golovna', 4, 'Корисні посилання', '', '', '', NULL, NULL, '2020-03-21 10:56:55', '2020-03-21 10:56:55'),
 (5, 'Наші партнери (головна)', 'nashi-partneri-golovna', 5, 'Наші партнери', '', '', '', NULL, NULL, '2020-03-21 11:10:09', '2020-03-21 11:10:09'),
-(6, 'Наші цінності', 'nashi-cinnosti', 6, 'Наші цінності', '', '', '', NULL, NULL, '2020-03-26 18:37:45', '2020-03-26 18:37:45');
+(6, 'Наші цінності', 'nashi-cinnosti', 6, 'Наші цінності', '', '', '', NULL, NULL, '2020-03-26 18:37:45', '2020-03-26 18:37:45'),
+(7, 'Наші послуги', 'nashi-poslugi', 7, 'Наші послуги', '', '', '', NULL, NULL, '2020-05-12 16:05:59', '2020-05-12 16:05:59');
 
 -- --------------------------------------------------------
 
@@ -353,8 +354,8 @@ CREATE TABLE `infoblock_items` (
 --
 
 INSERT INTO `infoblock_items` (`id`, `infoblock_id`, `parent_id`, `title`, `sub_title`, `image`, `button_title`, `button_link`, `body`, `order`, `created_at`, `updated_at`) VALUES
-(1, 2, NULL, 'Сільськогосподарське дорадництво', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\1P1YJrUxhGP4bSLnwipR.jpg\",\"original_name\":\"slide1.jpg\"}]', '', NULL, 'Дорадча діяльність як фактор інформаційно-консультаційного забезпечення розвитку сільських територій', 1, '2020-03-21 09:48:46', '2020-03-21 10:02:02'),
-(2, 2, NULL, 'Дорадництво допоможе розвитку малого фермерства в Україні', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\4E7ChOwsmPt84ZtjJT1z.jpg\",\"original_name\":\"slide2.jpg\"}]', '', NULL, 'ФАО реалізує в Україні проект з надання підтримки для переходу до більш ефективної системи надання сільськогосподарських дорадчих послуг', 2, '2020-03-21 10:02:40', '2020-03-21 10:03:26'),
+(1, 2, NULL, 'Сільськогосподарське дорадництво', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\1P1YJrUxhGP4bSLnwipR.jpg\",\"original_name\":\"slide1.jpg\"}]', '', NULL, 'Дорадча діяльність як фактор інформаційно-консультаційного забезпечення розвитку сільських територій', 2, '2020-03-21 09:48:46', '2020-05-12 16:26:07'),
+(2, 2, NULL, 'Дорадництво допоможе розвитку малого фермерства в Україні', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\4E7ChOwsmPt84ZtjJT1z.jpg\",\"original_name\":\"slide2.jpg\"}]', '', NULL, 'ФАО реалізує в Україні проект з надання підтримки для переходу до більш ефективної системи надання сільськогосподарських дорадчих послуг', 1, '2020-03-21 10:02:40', '2020-05-12 16:26:07'),
 (3, 3, NULL, 'Підтримка дорадчих служб', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\8n3XnZc5P91v6BayHnMG.svg\",\"original_name\":\"teh-support.svg\"}]', 'Перейти', NULL, 'УКР Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et eveniet iste minima quasi quidem tenetur! Ad impedit neque nobis porro.', 3, '2020-03-21 10:19:33', '2020-03-21 15:59:23'),
 (4, 3, NULL, 'Навчання та самонавчання користувачів', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\gItQNa6KnIp8rYaW9Hzw.svg\",\"original_name\":\"student.svg\"}]', 'Перейти', NULL, 'УКР Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et eveniet iste minima quasi quidem tenetur! Ad impedit neque nobis porro.', 4, '2020-03-21 10:21:31', '2020-03-21 15:59:10'),
 (5, 3, NULL, 'Електронне дорадницто', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\w0DKpV0PPa9R25yeNBBh.svg\",\"original_name\":\"book.svg\"}]', 'Перейти', NULL, 'УКР Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur et eveniet iste minima quasi quidem tenetur! Ad impedit neque nobis porro.', 5, '2020-03-21 10:23:11', '2020-03-21 10:41:32'),
@@ -364,7 +365,10 @@ INSERT INTO `infoblock_items` (`id`, `infoblock_id`, `parent_id`, `title`, `sub_
 (9, 5, NULL, 'Журнал \"Землевпорядний вісник\"', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\FuwT1xMSsLiVmTgH6n1j.jpg\",\"original_name\":\"Visnik.jpg\"}]', '', 'http://zemvisnuk.com.ua/', '', 9, '2020-03-21 11:16:52', '2020-03-21 11:17:08'),
 (10, 6, NULL, 'Лорем іпсум', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\GzG4DhycPRM0pF8L2xCK.svg\",\"original_name\":\"adv1.svg\"}]', '', NULL, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 10, '2020-03-26 18:38:16', '2020-03-26 18:38:56'),
 (11, 6, NULL, 'Лорем 2', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\yn9d1N82PnqrNK0E35R8.svg\",\"original_name\":\"adv1.svg\"}]', '', NULL, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 11, '2020-03-26 18:39:17', '2020-03-26 18:39:32'),
-(13, 6, NULL, 'Іпсум 3', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\YmXWRAProhPWAZehs1tg.svg\",\"original_name\":\"book.svg\"}]', '', NULL, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 13, '2020-03-26 18:39:52', '2020-03-26 18:40:11');
+(13, 6, NULL, 'Іпсум 3', '', '[{\"download_link\":\"infoblock-items\\\\March2020\\\\YmXWRAProhPWAZehs1tg.svg\",\"original_name\":\"book.svg\"}]', '', NULL, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 13, '2020-03-26 18:39:52', '2020-03-26 18:40:11'),
+(14, 7, NULL, 'Назва послуги 1', '', '[{\"download_link\":\"infoblock-items\\\\May2020\\\\wTyr3QwWCmy0UUUn2wHS.svg\",\"original_name\":\"support.svg\"}]', '', NULL, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto, cumque cupiditate dolorem ea est fugit modi nisi officiis quae quidem quis saepe, soluta, ullam voluptatibus! Dignissimos ipsa necessitatibus ut!', 14, '2020-05-12 16:06:34', '2020-05-12 16:07:41'),
+(15, 7, NULL, 'Назва послуги 2', '', '[{\"download_link\":\"infoblock-items\\\\May2020\\\\weReH4blp5EJKqcHZdBC.svg\",\"original_name\":\"help.svg\"}]', '', NULL, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto, cumque cupiditate dolorem ea est fugit modi nisi officiis quae quidem quis saepe, soluta, ullam voluptatibus! Dignissimos ipsa necessitatibus ut!', 15, '2020-05-12 16:07:53', '2020-05-12 16:08:37'),
+(16, 7, NULL, 'Назва послуги 3', '', '[{\"download_link\":\"infoblock-items\\\\May2020\\\\gpFvHWjMZ5cKlt1XAB3m.svg\",\"original_name\":\"hr.svg\"}]', '', NULL, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto, cumque cupiditate dolorem ea est fugit modi nisi officiis quae quidem quis saepe, soluta, ullam voluptatibus! Dignissimos ipsa necessitatibus ut!', 16, '2020-05-12 16:09:04', '2020-05-12 16:09:19');
 
 -- --------------------------------------------------------
 
@@ -393,7 +397,8 @@ INSERT INTO `infoblock_types` (`id`, `name`, `blade_path`, `public`, `with_items
 (3, 'Сервіси (головна)', 'services', 0, 1, 0, '2020-03-21 09:05:54', '2020-03-21 09:05:54'),
 (4, 'Корисні посилання', 'useful-links', 0, 1, 0, '2020-03-21 10:56:12', '2020-03-21 10:56:12'),
 (5, 'Слайдер (партнери)', 'partners-slider', 0, 1, 0, '2020-03-21 11:08:25', '2020-03-21 11:08:25'),
-(6, 'Картки (Іконка + опис)', 'advantages', 0, 1, 0, '2020-03-26 18:36:15', '2020-03-26 18:42:27');
+(6, 'Картки (Іконка + опис)', 'advantages', 0, 1, 0, '2020-03-26 18:36:15', '2020-03-26 18:42:27'),
+(7, 'Послуги', 'poslugi', 0, 1, 0, '2020-05-12 16:04:50', '2020-05-12 16:04:50');
 
 -- --------------------------------------------------------
 
@@ -849,11 +854,11 @@ INSERT INTO `settings` (`id`, `key`, `display_name`, `value`, `details`, `type`,
 (2, 'site.description', 'Site Description', 'Site Description', '', 'text', 3, 'Site'),
 (3, 'site.logo', 'Site Logo', '', '', 'image', 4, 'Site'),
 (4, 'site.google_analytics_tracking_id', 'Google Analytics Tracking ID', NULL, '', 'text', 8, 'Site'),
-(5, 'admin.bg_image', 'Admin Background Image', '', '', 'image', 5, 'Admin'),
+(5, 'admin.bg_image', 'Admin Background Image', 'settings\\May2020\\TDo9avUgCdvht6b0X7NC.jpg', '', 'image', 5, 'Admin'),
 (6, 'admin.title', 'Admin Title', 'Dorada Admin', '', 'text', 1, 'Admin'),
 (7, 'admin.description', 'Admin Description', 'Адміністративна панель DORADA. Created by Zirael', '', 'text', 2, 'Admin'),
-(8, 'admin.loader', 'Admin Loader', '', '', 'image', 3, 'Admin'),
-(9, 'admin.icon_image', 'Admin Icon Image', '', '', 'image', 4, 'Admin'),
+(8, 'admin.loader', 'Admin Loader', 'settings\\May2020\\ATD9MkglOwq71reIcSTb.png', '', 'image', 3, 'Admin'),
+(9, 'admin.icon_image', 'Admin Icon Image', 'settings\\May2020\\Ukt3wND7fBHA3uEGCc6x.png', '', 'image', 4, 'Admin'),
 (10, 'admin.google_analytics_client_id', 'Google Analytics Client ID (used for admin dashboard)', NULL, '', 'text', 1, 'Admin'),
 (11, 'contacts.mobile-phone', 'Mobile phone', '+380989279554, +380989279554', NULL, 'text', 6, 'Contacts'),
 (12, 'contacts.email', 'Email', 'doradaukraine@gmail.com', NULL, 'text', 7, 'Contacts'),
@@ -1120,7 +1125,12 @@ INSERT INTO `translations` (`id`, `table_name`, `column_name`, `foreign_key`, `l
 (212, 'gallery_images', 'caption', 2, 'en', '2', '2020-03-26 18:50:01', '2020-03-26 18:50:01'),
 (213, 'gallery_images', 'caption', 3, 'en', '3', '2020-03-26 18:50:14', '2020-03-26 18:50:14'),
 (214, 'gallery_images', 'caption', 4, 'en', '4', '2020-03-26 18:50:37', '2020-03-26 18:50:37'),
-(215, 'gallery_images', 'caption', 5, 'en', '5', '2020-03-26 18:50:50', '2020-03-26 18:50:50');
+(215, 'gallery_images', 'caption', 5, 'en', '5', '2020-03-26 18:50:50', '2020-03-26 18:50:50'),
+(216, 'infoblocks', 'title', 7, 'en', 'Our services', '2020-05-12 16:05:59', '2020-05-12 16:05:59'),
+(217, 'infoblock_items', 'title', 14, 'en', 'Service name 1', '2020-05-12 16:07:41', '2020-05-12 16:09:35'),
+(218, 'infoblock_items', 'title', 15, 'en', 'Service name 2', '2020-05-12 16:08:37', '2020-05-12 16:08:37'),
+(219, 'infoblock_items', 'title', 16, 'en', 'Service name 3', '2020-05-12 16:09:04', '2020-05-12 16:09:04'),
+(220, 'infoblock_items', 'body', 14, 'en', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus architecto, cumque cupiditate dolorem ea est fugit modi nisi officiis quae quidem quis saepe, soluta, ullam voluptatibus! Dignissimos ipsa necessitatibus ut!', '2020-05-12 16:09:35', '2020-05-12 16:09:35');
 
 -- --------------------------------------------------------
 
@@ -1147,7 +1157,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `role_id`, `name`, `email`, `avatar`, `email_verified_at`, `password`, `remember_token`, `settings`, `created_at`, `updated_at`) VALUES
-(1, 1, 'Admin', 'admin@admin.com', 'users/default.png', NULL, '$2y$10$Ij59I.GDhV43/.pqq4FOPOxMzDv.nwrbPD2uN3IxUrIK9CRjXzWpK', 'ngDd0PCzOUsXktA0VGLijEHpClLnkQLRJMZUXuBXSE5PDqswxXSOtbrwvtqG', '{\"locale\":\"uk\"}', '2020-03-10 17:24:27', '2020-03-10 19:15:58');
+(1, 1, 'Admin', 'admin@admin.com', 'users/default.png', NULL, '$2y$10$Ij59I.GDhV43/.pqq4FOPOxMzDv.nwrbPD2uN3IxUrIK9CRjXzWpK', 'ngDd0PCzOUsXktA0VGLijEHpClLnkQLRJMZUXuBXSE5PDqswxXSOtbrwvtqG', '{\"locale\":\"uk\"}', '2020-03-10 17:24:27', '2020-03-10 19:15:58'),
+(2, 1, 'Сергій Саяпін', 'sayapin_sp@ukr.net', 'users/default.png', NULL, '$2y$10$l9oa.5VSp4qW/F7spDG10.yChu6YnQLOWzz4.MH5Ty4m1g921oPFa', NULL, '{\"locale\":\"uk\"}', '2020-05-12 16:28:53', '2020-05-12 16:28:53');
 
 -- --------------------------------------------------------
 
@@ -1159,6 +1170,13 @@ CREATE TABLE `user_roles` (
   `user_id` bigint(20) UNSIGNED NOT NULL,
   `role_id` bigint(20) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп даних таблиці `user_roles`
+--
+
+INSERT INTO `user_roles` (`user_id`, `role_id`) VALUES
+(2, 1);
 
 --
 -- Індекси збережених таблиць
@@ -1370,19 +1388,19 @@ ALTER TABLE `gallery_images`
 -- AUTO_INCREMENT для таблиці `infoblocks`
 --
 ALTER TABLE `infoblocks`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблиці `infoblock_items`
 --
 ALTER TABLE `infoblock_items`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT для таблиці `infoblock_types`
 --
 ALTER TABLE `infoblock_types`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблиці `menus`
@@ -1442,13 +1460,13 @@ ALTER TABLE `social_networks`
 -- AUTO_INCREMENT для таблиці `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=216;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=221;
 
 --
 -- AUTO_INCREMENT для таблиці `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Обмеження зовнішнього ключа збережених таблиць

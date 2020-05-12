@@ -165,7 +165,8 @@ return [
         /*
          * Package Service Providers...
          */
-
+        Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+        Webwizo\Shortcodes\ShortcodesServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -174,8 +175,6 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
-        Webwizo\Shortcodes\ShortcodesServiceProvider::class,
         App\Providers\ShortcodesServiceProvider::class,
     ],
 

@@ -20,11 +20,11 @@
     <div class="container-main">
         <div class="editor-wrap">
             <div class="page-heading">
-                <h1>{{ $post->title }}</h1>
+                <h1>{{ $post->getTranslatedAttribute('title') }}</h1>
             </div>
 
             <div class="editor-content">
-                {!! $post->body !!}
+                {!! $post->getTranslatedAttribute('body') !!}
             </div>
             <div class="post-date">
                 <p>{{ $post->created_at->format('d-m-Y') }}</p>

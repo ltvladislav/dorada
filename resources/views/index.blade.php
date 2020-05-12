@@ -17,7 +17,7 @@
 
     [infoblock code="opis-golovna"]
 
-    @include('infoblock.services')
+    [infoblock code="nashi-poslugi"]
 
     [infoblock code="nashi-partneri-golovna"]
 

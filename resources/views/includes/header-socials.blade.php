@@ -21,11 +21,11 @@
         @endforeach
     </div>
 
-    <div class="header-login">
-        <a href="#">
-            <svg> <use xlink:href="#user"> </use></svg>
-        </a>
-    </div>
+{{--    <div class="header-login">--}}
+{{--        <a href="#">--}}
+{{--            <svg> <use xlink:href="#user"> </use></svg>--}}
+{{--        </a>--}}
+{{--    </div>--}}
 
     @include('includes.languages')
 </div>
